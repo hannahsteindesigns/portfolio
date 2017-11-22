@@ -1,0 +1,21 @@
+@mixin flexbox($justify-content: space-between, $align-items: flex-start, $flow: row wrap) {
+  align-items: $align-items;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow: $flow;
+  justify-content: $justify-content;
+}
+
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+   #{$property}: $value;
+}
+
+@mixin responsiveMin($minWidth) {
+  @media (min-width: $minWidth) {
+    @content;
+  }
+}

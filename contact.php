@@ -1,39 +1,37 @@
 <?php
-function spamcheck($field) {
-  $field=filter_var($field, FILTER_SANITIZE_EMAIL);
-  if(filter_var($field, FILTER_VALIDATE_EMAIL)) {
-    return TRUE;
-  } else {
-    return FALSE;
-  }
-}
-?>
-<?php
-$field_name = $_POST['name'];
-$field_email = $_POST['email'];
-$field_phone = $_POST['phone'];
-$field_message = $_POST['message'];
+    // adapted from http://blog.teamtreehouse.com/create-ajax-contact-form
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $name = strip_tags(trim($_POST["name"]));
+				$name = str_replace(array("\r","\n"),array(" "," "),$name);
+        $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+        $message = trim($_POST["message"]);
 
-if (!empty($field_name)&&!empty($field_email)&&!empty($field_message))
-  {
-  $mail_to = 'hannahsteindesigns@gmail.com';
-  $subject = 'Message from a site visitor: '.$field_name;
+        if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            http_response_code(400);
+            echo "Oops! There was a problem with your submission. Please complete the form and try again.";
+            exit;
+        }
+        $recipient = "me@hannahsteindesigns.com";
+        $subject = "New message from a site visitor: $name";
 
-  $body_message = 'From: '.$field_name."\n";
-  $body_message .= 'Email: '.$field_email."\n";
-  $body_message .= 'Phone: '.$field_phone."\n";
-  $body_message .= 'Message: '."\n";
-  $body_message .= $field_message;
+        $email_content = "From: ".$name."\n";
+        $email_content .= "Email: ".$email."\n";
+        $email_content .= "Message: "."\n";
+        $email_content .= $message;
 
-  $headers = 'From: '.$field_email."\r\n";
-  $headers .= 'Reply-To: '.$field_email."\r\n";
+        $email_headers = "From: $name <$email>";
 
-  $mail_status = mail($mail_to, $subject, $body_message, $headers);
+        if (mail($recipient, $subject, $email_content, $email_headers)) {
+            http_response_code(200);
+            echo "Thank you! We'll be in touch.";
+        } else {
+            http_response_code(500);
+            echo "Oops! Something went wrong and we couldn't send your message. Please try again.";
+        }
 
-  echo "We'll be in touch!";
-  }
+    } else {
+        http_response_code(403);
+        echo "There was a problem with your submission. Please try again.";
+    }
 
-else {
-  echo "Sorry, something isn't right!";
-}
 ?>

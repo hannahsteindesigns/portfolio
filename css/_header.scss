@@ -1,0 +1,103 @@
+/* ===== header ===== */
+header {
+  border-bottom: 7px double $red;
+  margin-top: 50px;
+  > div {
+    @include flexbox($align-items: flex-end);
+    padding-bottom: 1em;
+    position: relative;
+    h1 {
+      margin: 0;
+    }
+    nav {
+      display: none;
+      margin-top: .5em;
+      width: 100%;
+      a {
+        display: block;
+        font-weight: bold;
+        margin: .5em 0;
+        padding: .5em 0;
+        text-transform: uppercase;
+        &.active {
+          color: $red;
+        }
+      }
+    }
+    .mobile-nav {
+      border: none;
+      cursor: pointer;
+      display: block;
+      height: 3.5em;
+      position: relative;
+      width: 3.5em;
+      @include responsiveMin(42em) {
+        display: none;
+      }
+      &:hover, &:focus {
+        border: none;
+        outline: none;
+      }
+      span {
+        background-color: lighten($teal, 15%);
+        content: "";
+        display: block;
+        height: .3em;
+        left: .6em;
+        position: absolute;
+        right: .6em;
+        top: 2em;
+        transition: background 0s .3s;
+        &::before, &::after {
+          @extend span;
+          left: 0;
+          transition-delay: .3s, 0s;
+          transition-duration: .3s, .3s;
+          width: 100%;
+        }
+        &::before {
+          top: -.7em;
+          transition-property: top, transform;
+        }
+        &::after {
+          bottom: -.7em;
+          top: auto;
+          transition-property: bottom, transform;
+        }
+      }
+      &.active {
+        span {
+          visibility: hidden;
+          &::before, &::after {
+            visibility: visible;
+            transition-delay: 0s, .3s;
+          }
+          &::before {
+            top: 0;
+            transform: rotate(45deg);
+          }
+          &::after {
+            bottom: 0;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+    @include responsiveMin(42em) {
+      align-items: baseline;
+      nav {
+          display: block !important;
+          margin: 0;
+          width: auto;
+          a {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            &:nth-of-type(2) {
+              margin: 0 1.5em;
+            }
+          }
+      }
+    }
+  }
+}

@@ -1,41 +1,43 @@
 <!doctype html>
 <html>
 <head>
-  <title>contact me - hannah stein designs</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52747973-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-52747973-1');
+  </script>
+  <title>hannah stein designs</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1, maximum-scale=2, user-scalable=yes">    
+  <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1, maximum-scale=2, user-scalable=yes">
   <!-- styles & images -->
-  <link rel="stylesheet" href="css/style.css"> 
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700" rel="stylesheet">
+  <link href="css/lightbox.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-52747973-1', 'auto');
-  ga('send', 'pageview');
-  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+  <script src="js/lightbox.js"></script>
 </head>
 
 <body>
   <!-- header -->
-  <header id="header" class="width">
-    <a href="/" class="logo left"><img src="images/HSD-logo.png" width="200" alt="Hannah Stein design and development" /></a>
-      <a class="mobile-nav right" title="toggle menu">
-      	<span></span>
-      </a>
-      <nav class="nav right">
-        <ul>
-          <li><a href="/" title="portfolio">portfolio</a></li>
-          <li><a href="about.html" title="about">about</a></li>
-          <li><a href="contact.html" title="contact" class="active">contact</a></li>
-        </ul>
-      </nav>
+  <header>
+    <div class="width">
+      <h1><a href="/">Hannah Stein</a></h1>
+        <a class="mobile-nav" title="toggle menu"><span></span></a>
+        <nav>
+          <a href="/" title="portfolio">portfolio</a>
+          <a href="about.html" title="about">about</a>
+          <a href="#" title="contact" class="active">contact</a>
+        </nav>
+    </div>
     </header>
     <div class="clear"></div>
   <!-- content -->
@@ -45,18 +47,18 @@
   <p><span style="color:rgb(0,204,204); margin-right:6px;">Email:</span>hannahsteindesigns@gmail.com</p> -->
   <p>Send me a message or click one of the buttons below to email me, connect with me on Linkedin or view more of my work on issuu.</p>
   <div id="form-messages"></div>
-  <form name="hscontact" id="form" method="post" action="contact.php">  
+  <form name="hscontact" id="form" method="post" action="contact.php">
     <div id="wrapping" class="clearfix">
-    <section id="aligned">  
+    <section id="aligned">
       <input required type="text" name="name" id="name" placeholder="Name" autocomplete="off" tabindex="1" class="txtinput">
-      <input required type="email" name="email" id="email" placeholder="Email address" autocomplete="off" tabindex="2" class="txtinput">  
+      <input required type="email" name="email" id="email" placeholder="Email address" autocomplete="off" tabindex="2" class="txtinput">
       <input type="tel" name="phone" id="phone" placeholder="Phone (optional)" tabindex="4" class="txtinput">
       <textarea required name="message" id="message" placeholder="Click to type a message." tabindex="5" class="txtblock"></textarea>
-    </section>  
-    <section id="buttons">  
-      <input type="submit" name="submit" id="submitbtn" class="submitbtn" tabindex="7" value="Send">  
+    </section>
+    <section id="buttons">
+      <input type="submit" name="submit" id="submitbtn" class="submitbtn" tabindex="7" value="Send">
       <br style="clear:both;">
-    </section>  
+    </section>
     </div>
   </form>
   </section>

@@ -1,0 +1,283 @@
+@charset "UTF-8";
+/* ===== Portfolio Styles — 11/10/2017 ===== */
+html {
+  background-color: #F9F9F9; }
+
+body {
+  box-sizing: border-box;
+  color: #666;
+  font: normal 14px "Roboto", Helvetica, Arial, sans-serif;
+  margin: 0; }
+
+.width {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 92%; }
+  @media (min-width: 85em) {
+    .width {
+      width: 100%; } }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: bold; }
+
+::selection {
+  background-color: #05c0ac;
+  color: #fff; }
+
+::-moz-selection {
+  background-color: #05c0ac;
+  color: #fff; }
+
+a {
+  border-bottom: 1px dotted transparent;
+  color: #F02E11;
+  text-decoration: none;
+  transition: border .2s ease; }
+  a:hover, a:focus, a:active {
+    border-color: #666;
+    outline: none; }
+  header a {
+    color: #666; }
+
+button {
+  background-color: #037569;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(102, 102, 102, 0.5);
+  color: #FFF;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 1em 1.25em;
+  text-transform: uppercase;
+  transition: background-color .5s; }
+  button:hover {
+    background-color: #048e7f;
+    color: #FFF;
+    transition: background-color .5s; }
+  button.full {
+    width: 100%; }
+
+/* ===== header ===== */
+header {
+  border-bottom: 7px double #F02E11;
+  margin-top: 50px; }
+  header > div {
+    align-items: flex-end;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-bottom: 1em;
+    position: relative; }
+    header > div h1 {
+      margin: 0; }
+    header > div nav {
+      display: none;
+      margin-top: .5em;
+      width: 100%; }
+      header > div nav a {
+        display: block;
+        font-weight: bold;
+        margin: .5em 0;
+        padding: .5em 0;
+        text-transform: uppercase; }
+        header > div nav a.active {
+          color: #F02E11; }
+    header > div .mobile-nav {
+      border: none;
+      cursor: pointer;
+      display: block;
+      height: 3.5em;
+      position: relative;
+      width: 3.5em; }
+      @media (min-width: 42em) {
+        header > div .mobile-nav {
+          display: none; } }
+      header > div .mobile-nav:hover, header > div .mobile-nav:focus {
+        border: none;
+        outline: none; }
+      header > div .mobile-nav span, header > div .mobile-nav span::before, header > div .mobile-nav span::after {
+        background-color: #05c0ac;
+        content: "";
+        display: block;
+        height: .3em;
+        left: .6em;
+        position: absolute;
+        right: .6em;
+        top: 2em;
+        transition: background 0s .3s; }
+        header > div .mobile-nav span::before, header > div .mobile-nav span::after {
+          left: 0;
+          transition-delay: .3s, 0s;
+          transition-duration: .3s, .3s;
+          width: 100%; }
+        header > div .mobile-nav span::before {
+          top: -.7em;
+          transition-property: top, transform; }
+        header > div .mobile-nav span::after {
+          bottom: -.7em;
+          top: auto;
+          transition-property: bottom, transform; }
+      header > div .mobile-nav.active span, header > div .mobile-nav.active span::before, header > div .mobile-nav.active span::after {
+        visibility: hidden; }
+        header > div .mobile-nav.active span::before, header > div .mobile-nav.active span::after {
+          visibility: visible;
+          transition-delay: 0s, .3s; }
+        header > div .mobile-nav.active span::before {
+          top: 0;
+          transform: rotate(45deg); }
+        header > div .mobile-nav.active span::after {
+          bottom: 0;
+          transform: rotate(-45deg); }
+    @media (min-width: 42em) {
+      header > div {
+        align-items: baseline; }
+        header > div nav {
+          display: block !important;
+          margin: 0;
+          width: auto; }
+          header > div nav a {
+            display: inline-block;
+            margin: 0;
+            padding: 0; }
+            header > div nav a:nth-of-type(2) {
+              margin: 0 1.5em; } }
+
+footer {
+  background-color: #F02E11;
+  color: #FFF;
+  margin-top: 3em; }
+  footer > div {
+    box-sizing: border-box;
+    padding: 2em 2em 5em; }
+  footer section {
+    align-items: flex-start;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-top: 2em; }
+    footer section > div.form {
+      background-color: #F9F9F9;
+      box-shadow: 0 2px 4px rgba(102, 102, 102, 0.5);
+      margin-top: 2em;
+      max-width: 100%;
+      outline: 1px dotted #F02E11;
+      outline-offset: -6px;
+      padding: 2em;
+      width: 100%; }
+      @media (min-width: 50em) {
+        footer section > div.form {
+          flex: 0 1 50%;
+          margin-top: 0; } }
+    footer section > div.social {
+      border-bottom: 1px dotted #FFF;
+      margin-bottom: 1em;
+      padding-bottom: 1em; }
+      footer section > div.social h2 {
+        margin-top: 0;
+        margin-bottom: 1.5em; }
+  footer a {
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    color: #FFF;
+    margin: .75em 0;
+    opacity: 1;
+    transition: opacity .5s; }
+    footer a:hover, footer a:active, footer a:focus {
+      border-color: transparent;
+      opacity: .75;
+      transition: opacity .5s; }
+    footer a img {
+      margin-right: 1em; }
+  footer form > div {
+    margin-bottom: 1em;
+    position: relative; }
+  footer form input, footer form textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 4px double #037569;
+    box-shadow: none;
+    box-sizing: border-box;
+    display: block;
+    height: 3em;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    margin-bottom: 2em;
+    max-width: 100%;
+    outline: none;
+    padding-left: .25em;
+    transition: margin .2s;
+    width: 100%; }
+    footer form input.error, footer form textarea.error {
+      margin-bottom: 0; }
+    footer form input + label[placeholder], footer form textarea + label[placeholder] {
+      display: block;
+      line-height: 1em;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      width: 100%; }
+      footer form input + label[placeholder]::before, footer form textarea + label[placeholder]::before {
+        color: #666;
+        content: attr(placeholder);
+        display: inline-block;
+        padding: .5em;
+        padding-left: 0;
+        position: absolute;
+        top: 0;
+        transition: .3s ease-in-out;
+        white-space: nowrap; }
+    footer form input:focus + label[placeholder]::before, footer form input.focus + label[placeholder]::before, footer form textarea:focus + label[placeholder]::before, footer form textarea.focus + label[placeholder]::before {
+      color: #037569;
+      padding-left: 0;
+      top: -1.3em;
+      transition-duration: .2s; }
+    footer form input.error + label[placeholder]::after, footer form input.valid + label[placeholder]::after, footer form textarea.error + label[placeholder]::after, footer form textarea.valid + label[placeholder]::after {
+      content: "";
+      height: 1.45em;
+      margin: .25em;
+      position: absolute;
+      right: 0;
+      transition: background .5s;
+      width: 1.45em; }
+    footer form input.valid + label[placeholder]::after, footer form textarea.valid + label[placeholder]::after {
+      background: url("../images/valid.svg") no-repeat center center; }
+    footer form input.error + label[placeholder]::after, footer form textarea.error + label[placeholder]::after {
+      background: url("../images/invalid.svg") no-repeat center center; }
+  footer form textarea {
+    height: 9em;
+    min-height: 3em; }
+  footer form div.error {
+    color: #F02E11;
+    font-size: .9em;
+    margin: .5em 0;
+    text-align: right; }
+
+#form-messages {
+  border: 1px dotted #FFF;
+  border-radius: 2px;
+  display: none;
+  font-weight: bold;
+  margin-bottom: 2em;
+  padding: 1em; }
+
+/* NEW FORM
+    - archive old form (use git)
+    - archive v1 form
+    - remove unused, commented properties
+    - front-end error styles
+    - server error styles
+    - field icon alignment
+    - decide between dotted or double underlines?
+    - div.form {outline: 1px solid $red; outline-offset: -.5em;} ??
+      OROROR dotted outline. dots are accents, double underlines are main elements
+*/
+/* == Do not mistake temptation for opportunity. == */
+
+/*# sourceMappingURL=styles.css.map */

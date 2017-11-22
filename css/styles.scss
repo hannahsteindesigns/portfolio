@@ -1,0 +1,97 @@
+/* ===== Portfolio Styles — 11/10/2017 ===== */
+
+// reset
+//@import "reset";
+
+@import "mixins";
+
+// colors
+$red: #F02E11;
+$dark-grey: #666;
+$light-grey: #F9F9F9;
+// unused
+$yellow: #FFF798;
+//$teal: #00CCCC;
+$teal: #037569;
+
+// fonts
+$slab: "Roboto Slab", Georgia, serif;
+$sans: "Roboto", Helvetica, Arial, sans-serif;
+
+// base
+html {
+  background-color: $light-grey;
+}
+body {
+  box-sizing: border-box;
+  color: $dark-grey;
+  font: normal 14px $sans;
+  margin: 0;
+}
+.width {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 92%;
+  @include responsiveMin(85em) {
+    width: 100%;
+  }
+}
+
+// text
+h1, h2, h3, h4, h5, h6 {
+  font-family: $slab;
+  font-weight: bold;
+}
+
+::selection {
+  background-color: lighten($teal, 15%);
+  color: #fff;
+}
+::-moz-selection {
+  background-color: lighten($teal, 15%);
+  color: #fff;
+}
+
+// links
+a {
+  border-bottom: 1px dotted transparent;
+  color: $red;
+  text-decoration: none;
+  transition: border .2s ease;
+  &:hover, &:focus, &:active {
+    border-color: $dark-grey;
+    outline: none;
+  }
+  header & {
+    color: $dark-grey;
+  }
+}
+
+// buttons
+button {
+  background-color: $teal;
+//  border: 3px solid lighten($teal, 15%);
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba($dark-grey, .5);
+  color: #FFF;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 1em 1.25em;
+  text-transform: uppercase;
+  transition: background-color .5s;
+  &:hover {
+    background-color: lighten($teal, 5%);
+    color: #FFF;
+    transition: background-color .5s;
+  }
+  &.full {
+    width: 100%;
+  }
+}
+
+// page styles
+@import "header";
+@import "footer";
+
+
+/* == Do not mistake temptation for opportunity. == */
