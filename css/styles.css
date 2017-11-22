@@ -238,6 +238,7 @@ footer {
       top: -1.3em;
       transition-duration: .2s; }
     footer form input.error + label[placeholder]::after, footer form input.valid + label[placeholder]::after, footer form textarea.error + label[placeholder]::after, footer form textarea.valid + label[placeholder]::after {
+      background: transparent;
       content: "";
       height: 1.45em;
       margin: .25em;
@@ -274,7 +275,6 @@ textarea:-webkit-autofill {
 
 /* NEW FORM
     - decide between dotted or double underlines?
-    - div.form {outline: 1px solid $red; outline-offset: -.5em;} ??
       OROROR dotted outline. dots are accents, double underlines are main elements
 */
 /* == Do not mistake temptation for opportunity. == */

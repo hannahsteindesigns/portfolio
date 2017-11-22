@@ -37,55 +37,36 @@ $(document).ready(function(){
         }
       });
     },
-    invalidHandler: function(event, validator) {
-      event.preventDefault();
+    submitHandler: function(form, event) {
+      submitForm(form);
     }
   });
   // submit form logic
-  var submitForm = function() {
-    var form = $("#form"),
-        formMessages = $("#form-messages");
-
-  	$(form).submit(function(e) {
-  		e.preventDefault();
-
-  		var formData = $(form).serialize();
-
-  		$.ajax({
-  			type: "POST",
-  			url: $(form).attr("action"),
-  			data: formData
-  		})
-  		.done(function(response) {
-  			$(formMessages).removeClass("error");
-  			$(formMessages).addClass("success");
-        $("input, textarea").removeClass("focus");
-        form.validate().resetForm();
-  			$(formMessages).hide().text(response).fadeIn();
-  			$('#name').val("");
-  			$('#email').val("");
-  			$('#message').val("");
-        setTimeout(function(){
-          $(formMessages).hide("slow");
-        }, 10000);
-  		})
-  		.fail(function(data) {
-  			$(formMessages).removeClass("success");
-  			$(formMessages).addClass("error");
-
-  			if (data.responseText !== "") {
-  				$(formMessages).hide().text(data.responseText).fadeIn();
-  			} else {
-  				$(formMessages).hide().text("Oops! Something went wrong and we couldn't send your message. Please try again.").fadeIn();
-  			}
-  		});
-  	});
+  var submitForm = function(form) {
+    var formMessages = $("#form-messages"),
+        formData = $(form).serialize();
+		$.ajax({
+			type: "POST",
+			url: $(form).attr("action"),
+			data: formData
+		})
+		.done(function(response) {
+			$(formMessages).removeClass("error").addClass("success");
+      $("input, textarea").removeClass("focus");
+			$(formMessages).hide().text(response).fadeIn();
+			$('#name, #email, #message').val("");
+      $(form).validate().resetForm();
+      setTimeout(function(){
+        $(formMessages).hide("slow");
+      }, 10000);
+		})
+		.fail(function(data) {
+			$(formMessages).removeClass("success").addClass("error");
+			if (data.responseText !== "") {
+				$(formMessages).hide().text(data.responseText).fadeIn();
+			} else {
+				$(formMessages).hide().text("Oops! Something went wrong and we couldn't send your message. Please try again.").fadeIn();
+			}
+		});
   };
-
-  $("#submit").click(function(e){
-    e.preventDefault();
-    if ($("#form").valid()) {
-      submitForm();
-    }
-  });
 });
