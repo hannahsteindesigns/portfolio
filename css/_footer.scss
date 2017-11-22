@@ -131,7 +131,6 @@ footer {
   border-radius: 2px;
   color: $red;
   display: none;
-  font-weight: bold;
   margin-bottom: 2em;
   padding: 1em;
 }
@@ -143,8 +142,6 @@ textarea:-webkit-autofill {
 }
 
 /* NEW FORM
-    - server error styles
-    - field icon alignment
     - decide between dotted or double underlines?
     - div.form {outline: 1px solid $red; outline-offset: -.5em;} ??
       OROROR dotted outline. dots are accents, double underlines are main elements

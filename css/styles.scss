@@ -1,17 +1,11 @@
 /* ===== Portfolio Styles — 11/10/2017 ===== */
 
-// reset
-//@import "reset";
-
 @import "mixins";
 
 // colors
 $red: #F02E11;
 $dark-grey: #666;
 $light-grey: #F9F9F9;
-// unused
-$yellow: #FFF798;
-//$teal: #00CCCC;
 $teal: #037569;
 
 // fonts
@@ -70,7 +64,6 @@ a {
 // buttons
 button {
   background-color: $teal;
-//  border: 3px solid lighten($teal, 15%);
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba($dark-grey, .5);
   color: #FFF;
