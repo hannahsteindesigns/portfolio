@@ -13,13 +13,14 @@
         }
         $recipient = "me@hannahsteindesigns.com";
         $subject = "New message from a site visitor: $name";
+        $mail_host = "sub4.mail.dreamhost.com";
 
         $email_content = "From: ".$name."\n";
         $email_content .= "Email: ".$email."\n";
         $email_content .= "Message: "."\n";
         $email_content .= $message;
 
-        $email_headers = "From: $name <$email>";
+        $email_headers = "From: $recipient";
 
         if (mail($recipient, $subject, $email_content, $email_headers)) {
             http_response_code(200);
