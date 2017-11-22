@@ -208,11 +208,11 @@ footer {
     display: block;
     height: 3em;
     font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: .85em;
     margin-bottom: 2em;
     max-width: 100%;
     outline: none;
-    padding-left: .25em;
-    transition: margin .2s;
+    resize: vertical;
     width: 100%; }
     footer form input.error, footer form textarea.error {
       margin-bottom: 0; }
@@ -228,7 +228,6 @@ footer {
         content: attr(placeholder);
         display: inline-block;
         padding: .5em;
-        padding-left: 0;
         position: absolute;
         top: 0;
         transition: .3s ease-in-out;
@@ -252,7 +251,8 @@ footer {
       background: url("../images/invalid.svg") no-repeat center center; }
   footer form textarea {
     height: 9em;
-    min-height: 3em; }
+    min-height: 3em;
+    padding-top: 1em; }
   footer form div.error {
     color: #F02E11;
     font-size: .9em;
@@ -260,18 +260,20 @@ footer {
     text-align: right; }
 
 #form-messages {
-  border: 1px dotted #FFF;
+  border: 1px dotted #F02E11;
   border-radius: 2px;
+  color: #F02E11;
   display: none;
   font-weight: bold;
   margin-bottom: 2em;
   padding: 1em; }
 
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #F9F9F9 inset !important;
+  box-shadow: 0 0 0px 1000px #F9F9F9 inset !important; }
+
 /* NEW FORM
-    - archive old form (use git)
-    - archive v1 form
-    - remove unused, commented properties
-    - front-end error styles
     - server error styles
     - field icon alignment
     - decide between dotted or double underlines?

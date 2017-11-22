@@ -22,7 +22,7 @@ $(document).ready(function(){
     var el = $(this);
     el.val().trim().length ? el.addClass("focus") : el.removeClass("focus");
   });
-  // validation
+  // initialize validation
   $("#form").validate({
     errorElement: "div",
     errorPlacement: function(error, element) {
@@ -36,11 +36,14 @@ $(document).ready(function(){
           error.html(value);
         }
       });
+    },
+    invalidHandler: function(event, validator) {
+      event.preventDefault();
     }
   });
   // submit form logic
-  $(function() {
-  	var form = $("#form"),
+  var submitForm = function() {
+    var form = $("#form"),
         formMessages = $("#form-messages");
 
   	$(form).submit(function(e) {
@@ -76,9 +79,13 @@ $(document).ready(function(){
   				$(formMessages).hide().text("Oops! Something went wrong and we couldn't send your message. Please try again.").fadeIn();
   			}
   		});
-
   	});
+  };
 
+  $("#submit").click(function(e){
+    e.preventDefault();
+    if ($("#form").valid()) {
+      submitForm();
+    }
   });
-
 });

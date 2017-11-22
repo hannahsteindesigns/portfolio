@@ -58,25 +58,21 @@ footer {
       border: none;
       border-bottom: 4px double $teal;
       box-shadow: none;
-      //border: 3px solid lighten($red, 25%);
-      //border-radius: 2px;
       box-sizing: border-box;
       display: block;
       height: 3em;
       font-family: $sans;
+      font-size: .85em;
       margin-bottom: 2em;
       max-width: 100%;
       outline: none;
-      padding-left: .25em;
-      //resize: none;
-      transition: margin .2s;
+      resize: vertical;
       width: 100%;
       &.error {
         margin-bottom: 0;
       }
       + label[placeholder] {
         display: block;
-        //font-size: .9em;
         line-height: 1em;
         pointer-events: none;
         position: absolute;
@@ -87,7 +83,6 @@ footer {
           content: attr(placeholder);
           display: inline-block;
           padding: .5em;
-          padding-left: 0;
           position: absolute;
           top: 0;
           transition: .3s ease-in-out;
@@ -121,6 +116,7 @@ footer {
     textarea {
       height: 9em;
       min-height: 3em;
+      padding-top: 1em;
     }
     div.error {
       color: $red;
@@ -131,19 +127,22 @@ footer {
   }
 }
 #form-messages {
-  border: 1px dotted #FFF;
+  border: 1px dotted $red;
   border-radius: 2px;
+  color: $red;
   display: none;
   font-weight: bold;
   margin-bottom: 2em;
   padding: 1em;
 }
 
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px $light-grey inset !important;
+  box-shadow: 0 0 0px 1000px $light-grey inset !important;
+}
+
 /* NEW FORM
-    - archive old form (use git)
-    - archive v1 form
-    - remove unused, commented properties
-    - front-end error styles
     - server error styles
     - field icon alignment
     - decide between dotted or double underlines?
