@@ -62,7 +62,8 @@ a {
 }
 
 // buttons
-button {
+button,
+.button {
   background-color: $teal;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba($dark-grey, .5);
@@ -84,6 +85,7 @@ button {
 
 // page styles
 @import "header";
+@import "portfolio";
 @import "footer";
 
 
