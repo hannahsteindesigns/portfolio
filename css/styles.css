@@ -156,16 +156,18 @@ header {
   flex-flow: row wrap;
   justify-content: space-between;
   box-sizing: border-box;
-  margin: 5em 0;
+  margin: 10em 0;
   min-width: 300px; }
   .portfolio > article:first-of-type {
     margin-top: 2.5em; }
-    .portfolio > article:first-of-type .placeholder {
-      background: #666;
-      height: 300px;
-      flex: 0 1 62%; }
-    .portfolio > article:first-of-type .details {
-      flex: 0 1 34%; }
+  .portfolio > article.right {
+    flex-flow: row-reverse; }
+  .portfolio > article .placeholder {
+    background: #666;
+    height: 300px;
+    flex: 0 1 62%; }
+  .portfolio > article .details {
+    flex: 0 1 34%; }
   .portfolio > article .button {
     display: inline-block;
     font-weight: normal;
