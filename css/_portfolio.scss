@@ -3,8 +3,11 @@
   > article {
     @include flexbox();
     box-sizing: border-box;
-    margin: 10em 0;
+    margin: 7em 0;
     min-width: 300px;
+    @include responsiveMin(60em) {
+      margin: 10em 0;
+    }
     &:first-of-type {
       margin-top: 2.5em;
     }
@@ -15,28 +18,50 @@
     h3 {
       margin-top: 0;
     }
-    // MOBILE FIRST!
     .placeholder {
       background: $dark-grey;
       flex: 0 1 100%;
       height: 300px;
       margin-bottom: 2em;
-      @include responsiveMin(46em) {
+      @include responsiveMin(60em) {
+        flex: 0 1 62%;
+        margin-bottom: 0;
+      }
+    }
+    .img {
+      &:hover, &:active {
+        border-color: transparent;
+        opacity: 1;
+      }
+    }
+    img {
+      box-shadow: 0 2px 4px rgba($dark-grey, .5);
+      flex: 0 1 100%;
+      height: auto;
+      margin-bottom: 1em;
+      max-width: 100%;
+      width: 100%;
+      @include responsiveMin(60em) {
         flex: 0 1 62%;
         margin-bottom: 0;
       }
     }
     .details {
       flex: 0 1 100%;
-      @include responsiveMin(46em) {
-        flex: 0 1 34%;
+      @include responsiveMin(60em) {
+        flex: 0 1 30%;
       }
     }
     .button {
-      display: inline-block;
+      display: block;
       font-weight: normal;
       letter-spacing: .5px;
+      text-align: center;
       text-transform: lowercase;
+      @include responsiveMin(32em) {
+        display: inline-block;
+        text-align: left;
+      }
     }
   }
 }
