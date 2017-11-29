@@ -1,5 +1,53 @@
 @charset "UTF-8";
 /* ===== Portfolio Styles — 11/10/2017 ===== */
+html, body, div, span, header > div .mobile-nav span::before, header > div .mobile-nav span::after, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.teal {
+  color: #037569; }
+
+.red {
+  color: #F02E11; }
+
 html {
   background-color: #F9F9F9; }
 
@@ -19,7 +67,34 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto Slab", Georgia, serif;
-  font-weight: bold; }
+  font-weight: bold;
+  margin: .5em 0; }
+
+h1 {
+  font-size: 2.75em; }
+
+h2 {
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.5em; }
+
+h4 {
+  font-size: 1.25em; }
+
+h5 {
+  font-size: 1em; }
+
+h6 {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  letter-spacing: .5px;
+  text-transform: uppercase; }
+
+p {
+  font-size: 1em;
+  line-height: 1.25;
+  margin-bottom: 1.5em; }
 
 ::selection {
   background-color: #05c0ac;
@@ -32,11 +107,14 @@ h1, h2, h3, h4, h5, h6 {
 a {
   border-bottom: 1px dotted transparent;
   color: #F02E11;
+  opacity: 1;
   text-decoration: none;
-  transition: border .2s ease; }
+  transition: border .3s, opacity .3s; }
   a:hover, a:focus, a:active {
     border-color: #666;
-    outline: none; }
+    opacity: .75;
+    outline: none;
+    transition: border .3s, opacity .3s; }
   header a {
     color: #666; }
 
@@ -63,7 +141,7 @@ button,
 /* ===== header ===== */
 header {
   border-bottom: 7px double #F02E11;
-  margin-top: 50px; }
+  margin: 3.75em 0; }
   header > div {
     align-items: flex-end;
     display: -webkit-flex;
@@ -161,13 +239,24 @@ header {
   .portfolio > article:first-of-type {
     margin-top: 2.5em; }
   .portfolio > article.right {
-    flex-flow: row-reverse; }
+    flex-flow: row-reverse;
+    flex-wrap: wrap; }
+  .portfolio > article h3 {
+    margin-top: 0; }
   .portfolio > article .placeholder {
     background: #666;
+    flex: 0 1 100%;
     height: 300px;
-    flex: 0 1 62%; }
+    margin-bottom: 2em; }
+    @media (min-width: 46em) {
+      .portfolio > article .placeholder {
+        flex: 0 1 62%;
+        margin-bottom: 0; } }
   .portfolio > article .details {
-    flex: 0 1 34%; }
+    flex: 0 1 100%; }
+    @media (min-width: 46em) {
+      .portfolio > article .details {
+        flex: 0 1 34%; } }
   .portfolio > article .button {
     display: inline-block;
     font-weight: normal;
@@ -217,13 +306,9 @@ footer {
     flex-flow: row wrap;
     justify-content: flex-start;
     color: #FFF;
-    margin: .75em 0;
-    opacity: 1;
-    transition: opacity .5s; }
+    margin: .75em 0; }
     footer a:hover, footer a:active, footer a:focus {
-      border-color: transparent;
-      opacity: .75;
-      transition: opacity .5s; }
+      border-color: transparent; }
     footer a img {
       margin-right: 1em; }
   footer form > div {

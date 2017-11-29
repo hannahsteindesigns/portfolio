@@ -1,12 +1,19 @@
 /* ===== Portfolio Styles — 11/10/2017 ===== */
 
 @import "mixins";
+@import "reset";
 
 // colors
 $red: #F02E11;
 $dark-grey: #666;
 $light-grey: #F9F9F9;
 $teal: #037569;
+.teal {
+  color: $teal;
+}
+.red {
+  color: $red;
+}
 
 // fonts
 $slab: "Roboto Slab", Georgia, serif;
@@ -32,9 +39,42 @@ body {
 }
 
 // text
-h1, h2, h3, h4, h5, h6 {
+%heading {
   font-family: $slab;
   font-weight: bold;
+  margin: .5em 0;
+}
+h1 {
+  @extend %heading;
+  font-size: 2.75em;
+}
+h2 {
+  @extend %heading;
+  font-size: 2em;
+}
+h3 {
+  @extend %heading;
+  font-size: 1.5em;
+}
+h4 {
+  @extend %heading;
+  font-size: 1.25em;
+}
+h5 {
+  @extend %heading;
+  font-size: 1em;
+}
+h6 {
+  @extend %heading;
+  font-family: $sans;
+  font-size: 1em;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+p {
+  font-size: 1em;
+  line-height: 1.25;
+  margin-bottom: 1.5em;
 }
 
 ::selection {
@@ -50,11 +90,14 @@ h1, h2, h3, h4, h5, h6 {
 a {
   border-bottom: 1px dotted transparent;
   color: $red;
+  opacity: 1;
   text-decoration: none;
-  transition: border .2s ease;
+  transition: border .3s, opacity .3s;
   &:hover, &:focus, &:active {
     border-color: $dark-grey;
+    opacity: .75;
     outline: none;
+    transition: border .3s, opacity .3s;
   }
   header & {
     color: $dark-grey;

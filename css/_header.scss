@@ -1,7 +1,7 @@
 /* ===== header ===== */
 header {
   border-bottom: 7px double $red;
-  margin-top: 50px;
+  margin: 3.75em 0;
   > div {
     @include flexbox($align-items: flex-end);
     padding-bottom: 1em;

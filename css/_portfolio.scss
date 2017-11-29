@@ -10,14 +10,27 @@
     }
     &.right {
       flex-flow: row-reverse;
+      flex-wrap: wrap;
     }
+    h3 {
+      margin-top: 0;
+    }
+    // MOBILE FIRST!
     .placeholder {
       background: $dark-grey;
+      flex: 0 1 100%;
       height: 300px;
-      flex: 0 1 62%;
+      margin-bottom: 2em;
+      @include responsiveMin(46em) {
+        flex: 0 1 62%;
+        margin-bottom: 0;
+      }
     }
     .details {
-      flex: 0 1 34%;
+      flex: 0 1 100%;
+      @include responsiveMin(46em) {
+        flex: 0 1 34%;
+      }
     }
     .button {
       display: inline-block;
