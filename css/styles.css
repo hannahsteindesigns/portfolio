@@ -292,9 +292,21 @@ header {
         text-align: left; } }
 
 /* ===== about ===== */
-#content.about p {
-  font-size: 1.2em;
-  line-height: 1.5em; }
+.about {
+  align-items: flex-start;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  min-height: 30em; }
+  .about p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-bottom: 1em; }
+  @media (min-width: 42em) {
+    .about > div {
+      flex: 0 1 55%; } }
 
 /* ===== footer ===== */
 footer {

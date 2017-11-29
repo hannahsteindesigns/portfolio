@@ -11,10 +11,11 @@ $(document).ready(function(){
     e.preventDefault();
     var target = this.hash,
         $target = $(target);
+    $(".mobile-nav").trigger("click");
     $("html, body").stop().animate({
       "scrollTop": $target.offset().top
     }, 900, "swing", function(){
-      history.replaceState(null, null, target);
+      history.pushState(null, null, target);
     });
   });
   // keep adaptive placeholders in place

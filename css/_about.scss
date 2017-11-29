@@ -1,7 +1,15 @@
 /* ===== about ===== */
-#content.about {
+.about {
+  @include flexbox();
+  min-height: 30em;
   p {
     font-size: 1.2em;
     line-height: 1.5em;
+    margin-bottom: 1em;
+  }
+  > div {
+    @include responsiveMin(42em) {
+      flex: 0 1 55%;
+    }
   }
 }
