@@ -42,7 +42,7 @@ body {
 %heading {
   font-family: $slab;
   font-weight: bold;
-  margin: .5em 0;
+  margin: .5em 0 1em;
 }
 h1 {
   @extend %heading;
