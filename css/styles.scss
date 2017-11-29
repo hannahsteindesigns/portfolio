@@ -76,6 +76,12 @@ p {
   line-height: 1.25;
   margin-bottom: 1.5em;
 }
+strong {
+  font-weight: bold;
+}
+.nobreak {
+  white-space: nowrap;
+}
 
 ::selection {
   background-color: lighten($teal, 15%);
@@ -129,6 +135,7 @@ button,
 // page styles
 @import "header";
 @import "portfolio";
+@import "about";
 @import "footer";
 
 

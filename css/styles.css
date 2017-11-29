@@ -96,6 +96,12 @@ p {
   line-height: 1.25;
   margin-bottom: 1.5em; }
 
+strong {
+  font-weight: bold; }
+
+.nobreak {
+  white-space: nowrap; }
+
 ::selection {
   background-color: #05c0ac;
   color: #fff; }
@@ -285,6 +291,12 @@ header {
         display: inline-block;
         text-align: left; } }
 
+/* ===== about ===== */
+#content.about p {
+  font-size: 1.2em;
+  line-height: 1.5em; }
+
+/* ===== footer ===== */
 footer {
   background-color: #F02E11;
   color: #FFF;
