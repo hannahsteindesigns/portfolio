@@ -54,10 +54,7 @@
     }
     .button {
       display: block;
-      font-weight: normal;
-      letter-spacing: .5px;
       text-align: center;
-      text-transform: lowercase;
       @include responsiveMin(32em) {
         display: inline-block;
         text-align: left;

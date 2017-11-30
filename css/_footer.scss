@@ -122,6 +122,11 @@ footer {
       margin: .5em 0;
       text-align: right;
     }
+    button, .button {
+      font-weight: bold;
+      letter-spacing: normal;
+      text-transform: uppercase;
+    }
   }
 }
 #form-messages {

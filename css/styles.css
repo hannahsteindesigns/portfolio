@@ -96,7 +96,8 @@ p {
   line-height: 1.25;
   margin-bottom: 1.5em; }
 
-strong {
+.stress {
+  color: #037569;
   font-weight: bold; }
 
 .nobreak {
@@ -131,9 +132,8 @@ button,
   box-shadow: 0 2px 4px rgba(102, 102, 102, 0.5);
   color: #FFF;
   cursor: pointer;
-  font-weight: bold;
+  letter-spacing: .5px;
   padding: 1em 1.25em;
-  text-transform: uppercase;
   transition: background-color .5s; }
   button:hover,
   .button:hover {
@@ -282,10 +282,7 @@ header {
         flex: 0 1 30%; } }
   .portfolio > article .button {
     display: block;
-    font-weight: normal;
-    letter-spacing: .5px;
-    text-align: center;
-    text-transform: lowercase; }
+    text-align: center; }
     @media (min-width: 32em) {
       .portfolio > article .button {
         display: inline-block;
@@ -420,6 +417,10 @@ footer {
     font-size: .9em;
     margin: .5em 0;
     text-align: right; }
+  footer form button, footer form .button {
+    font-weight: bold;
+    letter-spacing: normal;
+    text-transform: uppercase; }
 
 #form-messages {
   border: 1px dotted #F02E11;

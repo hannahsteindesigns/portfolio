@@ -76,7 +76,8 @@ p {
   line-height: 1.25;
   margin-bottom: 1.5em;
 }
-strong {
+.stress {
+  color: $teal;
   font-weight: bold;
 }
 .nobreak {
@@ -118,9 +119,8 @@ button,
   box-shadow: 0 2px 4px rgba($dark-grey, .5);
   color: #FFF;
   cursor: pointer;
-  font-weight: bold;
+  letter-spacing: .5px;
   padding: 1em 1.25em;
-  text-transform: uppercase;
   transition: background-color .5s;
   &:hover {
     background-color: lighten($teal, 5%);
