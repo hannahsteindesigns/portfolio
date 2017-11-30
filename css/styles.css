@@ -482,7 +482,8 @@ textarea:-webkit-autofill {
 
 #content {
   opacity: 0;
-  transition: opacity .7s ease-in; }
+  transition: opacity .7s ease-in;
+  transition-delay: .3s; }
 
 /* == Do not mistake temptation for opportunity. == */
 
