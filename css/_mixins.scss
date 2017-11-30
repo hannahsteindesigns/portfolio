@@ -7,11 +7,13 @@
   justify-content: $justify-content;
 }
 
-@mixin prefix($property, $value, $prefixes: ()) {
-  @each $prefix in $prefixes {
-    #{'-' + $prefix + '-' + $property}: $value;
+@mixin prefix($declarations, $prefixes: ()) {
+  @each $property, $value in $declarations {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+    #{$property}: $value;
   }
-   #{$property}: $value;
 }
 
 @mixin responsiveMin($minWidth) {

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* ===== Portfolio Styles — 11/10/2017 ===== */
+/* ===== Portfolio Styles — 11/30/2017 ===== */
 html, body, div, span, header > div .mobile-nav span::before, header > div .mobile-nav span::after, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -102,6 +102,12 @@ p {
 
 .nobreak {
   white-space: nowrap; }
+
+.break {
+  display: block; }
+  @media (min-width: 35em) {
+    .break {
+      display: inline; } }
 
 ::selection {
   background-color: #05c0ac;
@@ -238,12 +244,13 @@ header {
   display: -ms-flex;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
   box-sizing: border-box;
   margin: 7em 0;
   min-width: 300px; }
   @media (min-width: 60em) {
     .portfolio > article {
+      justify-content: space-between;
       margin: 10em 0; } }
   .portfolio > article:first-of-type {
     margin-top: 5em; }
@@ -255,6 +262,17 @@ header {
   .portfolio > article .img:hover, .portfolio > article .img:active {
     border-color: transparent;
     opacity: 1; }
+  .portfolio > article img {
+    box-shadow: 0 2px 4px rgba(102, 102, 102, 0.5);
+    flex: 0 1 100%;
+    height: auto;
+    margin-bottom: 1em;
+    max-width: 600px;
+    width: 100%; }
+    @media (min-width: 60em) {
+      .portfolio > article img {
+        flex: 0 1 62%;
+        margin-bottom: 0; } }
   .portfolio > article .details {
     flex: 0 1 100%; }
     @media (min-width: 60em) {
@@ -267,30 +285,6 @@ header {
       .portfolio > article .button {
         display: inline-block;
         text-align: left; } }
-
-.progressive {
-  overflow: hidden;
-  position: relative; }
-  .progressive img {
-    box-shadow: 0 2px 4px rgba(102, 102, 102, 0.5);
-    flex: 0 1 100%;
-    height: auto;
-    margin-bottom: 1em;
-    max-width: 600px;
-    width: 100%; }
-    @media (min-width: 60em) {
-      .progressive img {
-        flex: 0 1 62%;
-        margin-bottom: 0; } }
-    .progressive img.lowres {
-      -webkit-filter: blur(5px);
-      filter: blur(5px); }
-    .progressive img.overlay {
-      left: 0;
-      opacity: 0;
-      position: absolute;
-      top: 0;
-      transition: opacity 200ms ease-in; }
 
 /* ===== case study ===== */
 .case article {
@@ -442,6 +436,34 @@ input:-webkit-autofill,
 textarea:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #F9F9F9 inset !important;
   box-shadow: 0 0 0px 1000px #F9F9F9 inset !important; }
+
+/* ===== animation ===== */
+.progressive {
+  overflow: hidden;
+  position: relative; }
+  .progressive img.lowres {
+    -webkit-filter: blur(5px);
+    filter: blur(5px); }
+  .progressive img.overlay {
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: opacity 400ms ease-in; }
+
+.animate.fade article {
+  -ms-transform: translate(0px, 200px);
+  -webkit-transform: translate3d(0px, 200px, 0px);
+  transform: translate3d(0px, 200px, 0px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  opacity: 0;
+  transition: all 700ms ease-out; }
+  .animate.fade article.in-view {
+    -ms-transform: translate(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1; }
 
 /* == Do not mistake temptation for opportunity. == */
 

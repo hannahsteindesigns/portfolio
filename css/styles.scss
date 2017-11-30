@@ -1,4 +1,4 @@
-/* ===== Portfolio Styles — 11/10/2017 ===== */
+/* ===== Portfolio Styles — 11/30/2017 ===== */
 
 @import "mixins";
 @import "reset";
@@ -83,6 +83,12 @@ p {
 .nobreak {
   white-space: nowrap;
 }
+.break {
+  display: block;
+  @include responsiveMin(35em) {
+    display: inline;
+  }
+}
 
 ::selection {
   background-color: lighten($teal, 15%);
@@ -138,6 +144,7 @@ button,
 @import "cases";
 @import "about";
 @import "footer";
+@import "animate";
 
 
 /* == Do not mistake temptation for opportunity. == */

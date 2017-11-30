@@ -140,5 +140,7 @@ footer {
 
 input:-webkit-autofill,
 textarea:-webkit-autofill {
-  @include prefix(box-shadow, 0 0 0px 1000px $light-grey inset !important, webkit);
+  @include prefix((
+    box-shadow: 0 0 0px 1000px $light-grey inset !important
+  ), webkit)
 }
