@@ -252,29 +252,9 @@ header {
     flex-wrap: wrap; }
   .portfolio > article h3 {
     margin-top: 0; }
-  .portfolio > article .placeholder {
-    background: #666;
-    flex: 0 1 100%;
-    height: 300px;
-    margin-bottom: 2em; }
-    @media (min-width: 60em) {
-      .portfolio > article .placeholder {
-        flex: 0 1 62%;
-        margin-bottom: 0; } }
   .portfolio > article .img:hover, .portfolio > article .img:active {
     border-color: transparent;
     opacity: 1; }
-  .portfolio > article img {
-    box-shadow: 0 2px 4px rgba(102, 102, 102, 0.5);
-    flex: 0 1 100%;
-    height: auto;
-    margin-bottom: 1em;
-    max-width: 100%;
-    width: 100%; }
-    @media (min-width: 60em) {
-      .portfolio > article img {
-        flex: 0 1 62%;
-        margin-bottom: 0; } }
   .portfolio > article .details {
     flex: 0 1 100%; }
     @media (min-width: 60em) {
@@ -287,6 +267,34 @@ header {
       .portfolio > article .button {
         display: inline-block;
         text-align: left; } }
+
+.progressive {
+  overflow: hidden;
+  position: relative; }
+  .progressive img {
+    box-shadow: 0 2px 4px rgba(102, 102, 102, 0.5);
+    flex: 0 1 100%;
+    height: auto;
+    margin-bottom: 1em;
+    max-width: 600px;
+    width: 100%; }
+    @media (min-width: 60em) {
+      .progressive img {
+        flex: 0 1 62%;
+        margin-bottom: 0; } }
+    .progressive img.lowres {
+      -webkit-filter: blur(5px);
+      filter: blur(5px); }
+    .progressive img.overlay {
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      transition: opacity 200ms ease-in; }
+
+/* ===== case study ===== */
+.case article {
+  margin: 7em 0; }
 
 /* ===== about ===== */
 .about {

@@ -5,6 +5,29 @@ $(document).ready(function(){
     $("nav").slideToggle()
   });
 
+  // progressive image loading
+  // adapted from https://www.sourcetoad.com/dev-trends/progressive-loading-of-images/
+  var lazyLoad = function(){
+    $(".progressive").each(function(){
+      var image = new Image();
+      var previewImage = $(this).find(".lowres");
+      var newImage = $(this).find(".overlay");
+
+      image.onload = function(){
+        newImage.attr("src", image.src);
+        newImage.css("opacity", "1");
+        previewImage.css("opacity", "0");
+      };
+
+      image.src = previewImage.data("image");
+
+    });
+  }
+
+  if ($(".progressive").length) {
+    lazyLoad();
+  }
+
   /* contact form */
   // scroll to form
   $("a[title='contact']").click(function(e){
