@@ -8,8 +8,22 @@
     margin-bottom: 1em;
   }
   > div {
+    order: 2;
     @include responsiveMin(42em) {
       flex: 0 1 55%;
+      order: 0;
+    }
+  }
+  aside {
+    order: 1;
+    @include responsiveMin(42em) {
+      flex-basis: 35%;
+    }
+    .placeholder {
+      background-color: $teal;
+      border-radius: 50%;
+      height: 200px;
+      width: 200px;
     }
   }
 }

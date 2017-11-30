@@ -140,12 +140,12 @@ button,
   cursor: pointer;
   letter-spacing: .5px;
   padding: 1em 1.25em;
-  transition: background-color .5s; }
+  transition: all .5s; }
   button:hover,
   .button:hover {
     background-color: #048e7f;
     color: #FFF;
-    transition: background-color .5s; }
+    transition: all .5s; }
   button.full,
   .button.full {
     width: 100%; }
@@ -303,9 +303,22 @@ header {
     font-size: 1.2em;
     line-height: 1.5em;
     margin-bottom: 1em; }
-  @media (min-width: 42em) {
-    .about > div {
-      flex: 0 1 55%; } }
+  .about > div {
+    order: 2; }
+    @media (min-width: 42em) {
+      .about > div {
+        flex: 0 1 55%;
+        order: 0; } }
+  .about aside {
+    order: 1; }
+    @media (min-width: 42em) {
+      .about aside {
+        flex-basis: 35%; } }
+    .about aside .placeholder {
+      background-color: #037569;
+      border-radius: 50%;
+      height: 200px;
+      width: 200px; }
 
 /* ===== footer ===== */
 footer {
@@ -449,21 +462,27 @@ textarea:-webkit-autofill {
     opacity: 0;
     position: absolute;
     top: 0;
-    transition: opacity 400ms ease-in; }
+    transition: opacity .4s ease-in; }
 
 .animate.fade article {
-  -ms-transform: translate(0px, 200px);
-  -webkit-transform: translate3d(0px, 200px, 0px);
-  transform: translate3d(0px, 200px, 0px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
   opacity: 0;
-  transition: all 700ms ease-out; }
+  transition: all .7s ease-out; }
   .animate.fade article.in-view {
-    -ms-transform: translate(0px, 0px, 0px);
-    -webkit-transform: translate3d(0px, 0px, 0px);
-    transform: translate3d(0px, 0px, 0px);
     opacity: 1; }
+  .animate.fade article.slide {
+    -ms-transform: translate(0px, 200px);
+    -webkit-transform: translate3d(0px, 200px, 0px);
+    transform: translate3d(0px, 200px, 0px);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+    .animate.fade article.slide.in-view {
+      -ms-transform: translate(0px, 0px, 0px);
+      -webkit-transform: translate3d(0px, 0px, 0px);
+      transform: translate3d(0px, 0px, 0px); }
+
+#content {
+  opacity: 0;
+  transition: opacity .7s ease-in; }
 
 /* == Do not mistake temptation for opportunity. == */
 

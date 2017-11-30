@@ -127,11 +127,11 @@ button,
   cursor: pointer;
   letter-spacing: .5px;
   padding: 1em 1.25em;
-  transition: background-color .5s;
+  transition: all .5s;
   &:hover {
     background-color: lighten($teal, 5%);
     color: #FFF;
-    transition: background-color .5s;
+    transition: all .5s;
   }
   &.full {
     width: 100%;

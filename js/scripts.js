@@ -1,4 +1,7 @@
 $(document).ready(function(){
+  // fade in pretty
+  $("#content").css("opacity", "1");
+
   // mobile nav
   $(".mobile-nav").click(function(){
     $(this).toggleClass("active");
@@ -9,13 +12,12 @@ $(document).ready(function(){
   // adapted from https://www.sourcetoad.com/dev-trends/progressive-loading-of-images/
   var lazyLoad = function(){
     $(".progressive").each(function(){
-      var image = new Image();
-      var previewImage = $(this).find(".lowres");
-      var newImage = $(this).find(".overlay");
+      var image = new Image(),
+          previewImage = $(this).find(".lowres"),
+          newImage = $(this).find(".overlay");
 
       image.onload = function(){
-        newImage.attr("src", image.src);
-        newImage.css("opacity", "1");
+        newImage.attr("src", image.src).css("opacity", "1");
         previewImage.css("opacity", "0");
       };
 
@@ -27,6 +29,37 @@ $(document).ready(function(){
   if ($(".progressive").length) {
     lazyLoad();
   }
+
+  // animations
+  // adapted from https://www.sitepoint.com/scroll-based-animations-jquery-css3/
+  var animate = $('.animate article'),
+      $window = $(window),
+      checkView = function() {
+        var windowHeight = $window.height(),
+            windowTop = $window.scrollTop(),
+            windowBottom = ( windowTop + windowHeight + 200 );
+
+        $.each(animate, function(){
+          var el = $(this),
+              elHeight = el.outerHeight(),
+              elTop = el.offset().top,
+              elBottom = ( elTop + elHeight );
+
+          if ( (elBottom >= windowTop) && (elTop <= windowBottom) ) {
+            el.addClass("in-view");
+            el.removeClass("slide");
+          } else {
+            el.removeClass("in-view");
+          }
+
+          if (windowTop === 0) {
+            el.addClass("slide");
+          }
+        });
+      };
+
+      checkView();
+      $window.on("scroll resize", checkView);
 
   /* contact form */
   // scroll to form
