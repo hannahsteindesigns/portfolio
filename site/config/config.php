@@ -16,6 +16,8 @@ for more information: http://getkirby.com/license
 */
 
 c::set('license', 'put your license key here');
+c::set('excerpt.newest', 200);
+c::set('excerpt.recent', 150);
 
 /*
 
