@@ -19,8 +19,7 @@
     @include responsiveMin(42em) {
       flex-basis: 35%;
     }
-    .placeholder {
-      background-color: $teal;
+    img {
       border-radius: 50%;
       height: 200px;
       width: 200px;
