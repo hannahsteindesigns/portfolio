@@ -3,13 +3,13 @@
 @mixin flexCells($prefix) {
   &.#{$prefix}- {
     &quarter {
-      flex: 0 1 25%;
+      flex: 0 1 23%;
     }
     &third {
       flex: 0 1 30%;
     }
     &half {
-      flex: 0 1 50%;
+      flex: 0 1 47%;
     }
     &full {
       flex: 0 1 100%;
@@ -24,6 +24,9 @@
     > .cell {
       padding: 1em 0 0 1em;
     }
+  }
+  &.stretch {
+    align-items: stretch;
   }
   .cell {
     flex: 0 1 100%;

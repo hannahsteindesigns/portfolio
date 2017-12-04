@@ -1,5 +1,6 @@
 /* ===== case study ===== */
 .case {
+  margin-bottom: 7em;
   .overview {
     margin: 0 auto 5em;
   }
@@ -10,17 +11,47 @@
       max-width: 1000px;
       width: 100%;
     }
+    .gif {
+      img {
+        margin-bottom: 2em;
+        max-height: 528px;
+      }
+    }
   }
   article {
-    margin-bottom: 7em;
+    margin-top: 7em;
     p {
       font-size: 1.15em;
       line-height: 1.75em;
+    }
+    &#challenge {
+      @include flexbox();
+      section {
+        justify-content: center;
+        margin-bottom: 2em;
+        order: 2;
+        width: 100%;
+        img {
+          height: auto;
+          max-width: 400px;
+        }
+      }
+      p {
+        order: 1;
+        @include responsiveMin(45em) {
+          order: 3;
+        }
+      }
     }
     &#process {
       section > div img {
         margin-bottom: 2em;
         max-width: 100%;
+      }
+    }
+    &#results {
+      section div {
+        border-bottom: 1px dotted $dark-grey;
       }
     }
   }

@@ -3,7 +3,7 @@
   overflow: hidden;
   position: relative;
   img {
-    &.lowres {
+    &.lowres:not(.noblur) {
       @include prefix((filter: blur(5px)), webkit);
     }
     &.overlay {
