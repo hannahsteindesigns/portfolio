@@ -346,8 +346,7 @@ header {
   .case .banner {
     margin: 0 auto; }
     .case .banner .gif img {
-      margin-bottom: 2em;
-      max-height: 528px; }
+      margin-bottom: 2em; }
   .case article {
     margin-top: 5em; }
     .case article h3 {
