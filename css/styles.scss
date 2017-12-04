@@ -29,6 +29,14 @@ body {
   font: normal 14px $sans;
   margin: 0;
 }
+::selection {
+  background-color: lighten($teal, 15%);
+  color: #fff;
+}
+::-moz-selection {
+  background-color: lighten($teal, 15%);
+  color: #fff;
+}
 .width {
   margin: 0 auto;
   max-width: 1000px;
@@ -76,28 +84,6 @@ p {
   line-height: 1.25;
   margin-bottom: 1.5em;
 }
-.stress {
-  color: $teal;
-  font-weight: bold;
-}
-.nobreak {
-  white-space: nowrap;
-}
-.break {
-  display: block;
-  @include responsiveMin(35em) {
-    display: inline;
-  }
-}
-
-::selection {
-  background-color: lighten($teal, 15%);
-  color: #fff;
-}
-::-moz-selection {
-  background-color: lighten($teal, 15%);
-  color: #fff;
-}
 
 // links
 a {
@@ -138,7 +124,26 @@ button,
   }
 }
 
+// helpers
+.stress {
+  color: $teal;
+  font-weight: bold;
+}
+.nobreak {
+  white-space: nowrap;
+}
+.break {
+  display: block;
+  @include responsiveMin(35em) {
+    display: inline;
+  }
+}
+.text-center {
+  text-align: center;
+}
+
 // page styles
+@import "grid";
 @import "header";
 @import "portfolio";
 @import "cases";

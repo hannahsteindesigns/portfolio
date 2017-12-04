@@ -1,0 +1,40 @@
+/* ===== grid ===== */
+// adadpted from https://philipwalton.github.io/solved-by-flexbox/demos/grids/
+@mixin flexCells($prefix) {
+  &.#{$prefix}- {
+    &quarter {
+      flex: 0 1 25%;
+    }
+    &third {
+      flex: 0 1 30%;
+    }
+    &half {
+      flex: 0 1 50%;
+    }
+    &full {
+      flex: 0 1 100%;
+    }
+  }
+}
+
+.grid {
+  @include flexbox();
+  &.gutters {
+    margin: -1em 0 0 -1em;
+    > .cell {
+      padding: 1em 0 0 1em;
+    }
+  }
+  .cell {
+    flex: 0 1 100%;
+    @include responsiveMin(30em) {
+      @include flexCells(s)
+    }
+    @include responsiveMin(45em) {
+      @include flexCells(m);
+    }
+    @include responsiveMin(60em) {
+      @include flexCells(l);
+    }
+  }
+}

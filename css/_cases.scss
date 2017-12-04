@@ -1,6 +1,27 @@
 /* ===== case study ===== */
 .case {
+  .overview {
+    margin: 0 auto 5em;
+  }
+  .banner {
+    margin: 0 auto;
+    img {
+      height: auto;
+      max-width: 1000px;
+      width: 100%;
+    }
+  }
   article {
-    margin: 7em 0;
+    margin-bottom: 7em;
+    p {
+      font-size: 1.15em;
+      line-height: 1.75em;
+    }
+    &#process {
+      section > div img {
+        margin-bottom: 2em;
+        max-width: 100%;
+      }
+    }
   }
 }
