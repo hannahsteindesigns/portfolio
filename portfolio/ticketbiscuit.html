@@ -42,21 +42,15 @@
     <article class="overview text-center">
       <h2>purchase process redesign</h2>
       <h5>in-house designer &amp; developer at TicketBiscuit LLC</h5>
-      <p class="red">update design for better user experience, more attractive ui, stay up to date with competitors, reduce clicks</p>
-    </article>
-    <article class="banner">
-      <div class="progressive img">
-        <img class="lowres" src="../images/portfolio/low-res/purchase-process.jpg" data-image="../images/portfolio/purchase-process.jpg">
-        <img class="overlay" src="" alt="purchase process redesign">
-      </div>
+      <img src="../images/case-study/mockup-small.png" height="600px" />
     </article>
     <article id="challenge" class="slide">
       <h3 class="red text-center">challenge</h3>
+      <p>The ticket-buying interface remained largely unchanged since the TicketBiscuit platform was developed about 15 years ago. Users had to click through anywhere from four to seven pages before completing their transaction. The UI was initially created by back-end developers and was largely table-based. I was tasked with simplifying this process and modernizing it in both form and function without losing any functionality or disorienting returning users.</p>
       <section class="grid gutters text-center">
         <div class="cell m-half"><img src="../images/case-study/legacy-1.png" width="346px" height="400px"/></div>
         <div class="cell m-half"><img src="../images/case-study/legacy-2.png" width="346px" height="400px"/></div>
       </section>
-      <p>The ticket-buying interface remained largely unchanged since the TicketBiscuit platform was developed about 15 years ago. Users had to click through anywhere from four to seven pages before completing their transaction. The UI was initially created by back-end developers and was largely table-based. I was tasked with simplifying this process and modernizing it in both form and function without losing any functionality or disorienting returning users.</p>
     </article>
     <article id="process" class="slide">
       <h3 class="red text-center">process</h3>
@@ -84,14 +78,14 @@
         </div>
      </section>
     </article>
-    <article class="slide">
+    <article id="solution" class="slide">
       <h3 class="red text-center">solution</h3>
-      <article class="banner">
+      <div class="banner">
         <div class="progressive img gif">
           <img class="lowres noblur" src="../images/portfolio/purchase-process.jpg" data-image="../images/case-study/purchase-process.gif">
           <img class="overlay" src="" alt="purchase process redesign">
         </div>
-      </article>
+      </div>
       <p>I decided on a card-based layout to allow modernization of the UI while preserving the modular nature of the existing components. Each card is collapsible and displays a summary of its information when collapsed. Cards that need user input are automatically collapsed when going to checkout. This means returning users can get to the checkout page, review the information on their collapsed cards, and click pay in a matter of seconds.</p>
       <p>I looked at our analytics to determine which browser versions we should support and what features could be integrated. Since about 55% of our users access the site via mobile device, I focused on mobile optimization. Since this page is form-heavy, I implemented changes to make filling out these forms easier. HTML5 input types trigger the correct keyboard on mobile devices, while input masking makes input data easier to scan. I applied input masking to the credit card number, expiration date, CCV code, phone number, and postal code as well as all required elements. Since we have some customers outside the US, phone number and postal code field validation patterns are dynamic based on country selected. The form supports validation for US, Canada, and the UK.</p>
       <p>Back-end developers implemented my new total cost design that updates automatically based on decisions made in the checkout cards. I also made the ticket purchase timer more conspicuous so it didn't get lost on the page and created a new, separate cart page that can be accessed outside the purchase process. Since the screen can become very long on mobile, I made the pay button float near the bottom of the screen so it's always within reach. Lastly, I used some jQuery and CSS3 transitions to animate interactions for a smoother user experience.</p>

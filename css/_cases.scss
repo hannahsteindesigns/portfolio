@@ -1,15 +1,21 @@
 /* ===== case study ===== */
+%img {
+  height: auto;
+  max-width: 1000px;
+  width: 100%;
+}
 .case {
   margin-bottom: 7em;
   .overview {
     margin: 0 auto 5em;
+    img {
+      @extend %img;
+    }
   }
   .banner {
     margin: 0 auto;
     img {
-      height: auto;
-      max-width: 1000px;
-      width: 100%;
+      @extend %img;
     }
     .gif {
       img {
@@ -19,7 +25,10 @@
     }
   }
   article {
-    margin-top: 7em;
+    margin-top: 5em;
+    h3 {
+      width: 100%;
+    }
     p {
       font-size: 1.15em;
       line-height: 1.75em;
@@ -29,17 +38,10 @@
       section {
         justify-content: center;
         margin-bottom: 2em;
-        order: 2;
         width: 100%;
         img {
           height: auto;
           max-width: 400px;
-        }
-      }
-      p {
-        order: 1;
-        @include responsiveMin(45em) {
-          order: 3;
         }
       }
     }

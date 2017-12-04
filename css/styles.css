@@ -334,21 +334,24 @@ header {
         text-align: left; } }
 
 /* ===== case study ===== */
+.case .overview img, .case .banner img {
+  height: auto;
+  max-width: 1000px;
+  width: 100%; }
+
 .case {
   margin-bottom: 7em; }
   .case .overview {
     margin: 0 auto 5em; }
   .case .banner {
     margin: 0 auto; }
-    .case .banner img {
-      height: auto;
-      max-width: 1000px;
-      width: 100%; }
     .case .banner .gif img {
       margin-bottom: 2em;
       max-height: 528px; }
   .case article {
-    margin-top: 7em; }
+    margin-top: 5em; }
+    .case article h3 {
+      width: 100%; }
     .case article p {
       font-size: 1.15em;
       line-height: 1.75em; }
@@ -362,16 +365,10 @@ header {
       .case article#challenge section {
         justify-content: center;
         margin-bottom: 2em;
-        order: 2;
         width: 100%; }
         .case article#challenge section img {
           height: auto;
           max-width: 400px; }
-      .case article#challenge p {
-        order: 1; }
-        @media (min-width: 45em) {
-          .case article#challenge p {
-            order: 3; } }
     .case article#process section > div img {
       margin-bottom: 2em;
       max-width: 100%; }
