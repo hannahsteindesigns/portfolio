@@ -379,6 +379,13 @@ header {
       max-width: 100%; }
     .case article#results section div {
       border-bottom: 1px dotted #666; }
+  .case .pager {
+    align-items: flex-start;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
 
 /* ===== about ===== */
 .about {

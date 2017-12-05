@@ -55,4 +55,7 @@
       }
     }
   }
+  .pager {
+    @include flexbox();
+  }
 }
