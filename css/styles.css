@@ -141,6 +141,10 @@ button,
   color: #037569;
   font-weight: bold; }
 
+.note {
+  font-style: italic;
+  font-size: .875em !important; }
+
 .nobreak {
   white-space: nowrap; }
 
@@ -169,6 +173,8 @@ button,
     align-items: stretch; }
   .grid .cell {
     flex: 0 1 100%; }
+    .grid .cell.auto {
+      flex: 0 1 auto; }
     @media (min-width: 30em) {
       .grid .cell.s-quarter {
         flex: 0 1 23%; }

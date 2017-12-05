@@ -30,6 +30,9 @@
   }
   .cell {
     flex: 0 1 100%;
+    &.auto {
+      flex: 0 1 auto;
+    }
     @include responsiveMin(30em) {
       @include flexCells(s)
     }
