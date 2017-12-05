@@ -463,8 +463,10 @@ footer {
     margin: .75em 0; }
     footer a:hover, footer a:active, footer a:focus {
       border-color: transparent; }
-    footer a img {
-      margin-right: 1em; }
+    footer a .fa-stack {
+      margin-right: .5em; }
+      footer a .fa-stack-1x {
+        color: #F02E11; }
   footer form > div {
     margin-bottom: 1em;
     position: relative; }
