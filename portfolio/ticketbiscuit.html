@@ -82,10 +82,9 @@
     <article id="solution" class="slide">
       <h3 class="red text-center">solution</h3>
       <div class="banner">
-        <div class="progressive img gif text-center">
-          <img class="lowres noblur" src="../images/case-study/ticketbiscuit/purchase-process.png" data-image="../images/case-study/ticketbiscuit/purchase-process.gif">
-          <img class="overlay" src="" alt="purchase process redesign">
-        </div>
+        <video poster="../images/case-study/ticketbiscuit/purchase-process.png" muted autoplay controls>
+          <source src="../images/case-study/ticketbiscuit/purchase-process.mp4">
+        </video>
       </div>
       <p>I decided on a card-based layout to allow modernization of the UI while preserving the modular nature of the existing components. Each card is collapsible and displays a summary of its information when collapsed. Cards that need user input are automatically expanded when going to checkout, while those that don't are collapsed by default. This means returning users can get to the checkout page, review the information on their collapsed cards, and click pay in a matter of seconds.</p>
       <p>I looked at our analytics to determine which browser versions we should support and what features could be integrated. Since about 55% of our users access the site via mobile device, I focused on mobile optimization. This page is form-heavy, so I implemented changes to make filling out these forms easier for our users. HTML5 input types trigger the correct keyboard on mobile devices, while input masking makes input data easier to scan. I applied masking to the credit card number, expiration date, CCV code, phone number, and postal code fields as well as instant front-end validation for these and all required elements. Since we have some customers outside the US, phone number and postal code field validation patterns are dynamic based on the selected country. The form supports validation for the US, Canada, and the UK.</p>

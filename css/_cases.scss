@@ -17,10 +17,9 @@
     img {
       @extend %img;
     }
-    .gif {
-      img {
-        margin-bottom: 2em;
-      }
+    video {
+      @extend %img;
+      margin-bottom: 2em;
     }
   }
   article {
