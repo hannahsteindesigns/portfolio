@@ -14,6 +14,9 @@
     &full {
       flex: 0 1 100%;
     }
+    &auto {
+      flex: 0 1 auto;
+    }
   }
 }
 
@@ -30,8 +33,8 @@
   }
   .cell {
     flex: 0 1 100%;
-    &.auto {
-      flex: 0 1 auto;
+    &-center {
+      align-self: center;
     }
     @include responsiveMin(30em) {
       @include flexCells(s)
