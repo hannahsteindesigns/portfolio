@@ -6,17 +6,17 @@
 }
 .case {
   margin-bottom: 7em;
+  img {
+    @extend %img;
+    &.contain {
+      width: auto;
+    }
+  }
   .overview {
     margin: 0 auto 5em;
-    img {
-      @extend %img;
-    }
   }
   .banner {
     margin: 0 auto;
-    img {
-      @extend %img;
-    }
     video {
       @extend %img;
       margin-bottom: 2em;
@@ -52,6 +52,13 @@
     &#results {
       section div {
         border-bottom: 1px dotted $dark-grey;
+      }
+    }
+    &#solution {
+      @include responsiveMin(60em) {
+        #admin.contain {
+          width: 100%;
+        }
       }
     }
   }

@@ -133,6 +133,9 @@ button,
   font-style: italic;
   font-size: .875em !important;
 }
+img + .note {
+  margin-top: 1em;
+}
 .nobreak {
   white-space: nowrap;
 }
@@ -144,6 +147,12 @@ button,
 }
 .text-center {
   text-align: center;
+}
+.l-show {
+  display: none;
+  @include responsiveMin(60em) {
+    display: inline-block;
+  }
 }
 
 // page styles
