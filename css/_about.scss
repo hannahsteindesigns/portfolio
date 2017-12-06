@@ -1,28 +1,37 @@
 /* ===== about ===== */
 .about {
-  @include flexbox();
-  min-height: 30em;
-  p {
-    font-size: 1.2em;
-    line-height: 1.5em;
-    margin-bottom: 1em;
-  }
-  > div {
-    order: 2;
-    @include responsiveMin(42em) {
-      flex: 0 1 55%;
-      order: 0;
+  @include responsiveMin(42em) {
+    h2 {
+      text-align: left;
     }
   }
-  aside {
-    order: 1;
-    @include responsiveMin(42em) {
-      flex-basis: 35%;
+  .bio {
+    @include flexbox();
+    min-height: 30em;
+    p {
+      font-size: 1.2em;
+      line-height: 1.5em;
+      margin-bottom: 1em;
     }
-    img {
-      border-radius: 50%;
-      height: 200px;
-      width: 200px;
+    > div {
+      order: 2;
+      @include responsiveMin(42em) {
+        flex: 0 1 55%;
+        order: 0;
+      }
+    }
+    aside {
+      margin: 0 auto 2em;
+      order: 1;
+      @include responsiveMin(42em) {
+        flex-basis: 35%;
+        margin: 0;
+      }
+      img {
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+      }
     }
   }
 }

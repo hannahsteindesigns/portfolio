@@ -414,7 +414,10 @@ header {
     justify-content: space-between; }
 
 /* ===== about ===== */
-.about {
+@media (min-width: 42em) {
+  .about h2 {
+    text-align: left; } }
+.about .bio {
   align-items: flex-start;
   display: -webkit-flex;
   display: -ms-flex;
@@ -422,22 +425,24 @@ header {
   flex-flow: row wrap;
   justify-content: space-between;
   min-height: 30em; }
-  .about p {
+  .about .bio p {
     font-size: 1.2em;
     line-height: 1.5em;
     margin-bottom: 1em; }
-  .about > div {
+  .about .bio > div {
     order: 2; }
     @media (min-width: 42em) {
-      .about > div {
+      .about .bio > div {
         flex: 0 1 55%;
         order: 0; } }
-  .about aside {
+  .about .bio aside {
+    margin: 0 auto 2em;
     order: 1; }
     @media (min-width: 42em) {
-      .about aside {
-        flex-basis: 35%; } }
-    .about aside img {
+      .about .bio aside {
+        flex-basis: 35%;
+        margin: 0; } }
+    .about .bio aside img {
       border-radius: 50%;
       height: 200px;
       width: 200px; }
