@@ -614,42 +614,6 @@ textarea:-webkit-autofill {
   transition: opacity .7s ease-in;
   transition-delay: .3s; }
 
-/* ===== lightbox ===== */
-#lightbox-container {
-  background-color: rgba(0, 0, 0, 0.75);
-  display: none;
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100vw; }
-  #lightbox-container #lightbox {
-    background: #F9F9F9;
-    box-sizing: border-box;
-    color: #666;
-    left: 50%;
-    max-height: 98vh;
-    max-width: 98vw;
-    padding: 3em;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%); }
-    #lightbox-container #lightbox img {
-      max-height: 80vh;
-      max-width: 80vw; }
-  #lightbox-container .close {
-    cursor: pointer;
-    position: absolute;
-    right: 1.5em;
-    top: 1em; }
-    #lightbox-container .close:hover, #lightbox-container .close:active {
-      border-color: transparent; }
-
-a.lightbox {
-  border-bottom: none; }
-  a.lightbox:hover, a.lightbox:active {
-    border-bottom: none; }
-
 /* == Do not mistake temptation for opportunity. == */
 
 /*# sourceMappingURL=styles.css.map */

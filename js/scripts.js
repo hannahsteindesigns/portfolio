@@ -30,47 +30,6 @@ $(document).ready(function(){
     lazyLoad();
   }
 
-  // lightbox
-  var lightbox = function(){
-    $(".lightbox").click(function(e){
-      e.preventDefault();
-      var image = new Image(),
-          container = $("#lightbox"),
-          thumbnail = $(this).find(".thumbnail"),
-          full = $("<img class='full' src='' />");
-      $("#lightbox-container").fadeIn();
-      image.onload = function(){
-        full.attr("src", image.src).appendTo(container);
-        $(".loading").hide();
-      };
-
-      image.src = thumbnail.data("image")
-
-    });
-
-    var hide = function(){
-      $("#lightbox-container").fadeOut(function(){
-        $(".full").remove();
-      });
-    };
-
-    $("#lightbox-container").click(function(e){
-      e.preventDefault();
-      var clicked = $(e.target),
-          lightbox = $("#lightbox");
-      if (clicked.is(lightbox) || clicked.parents().is(lightbox)) {
-        return
-      } else { hide(); }
-    });
-    $("#lightbox .close").click(function(){
-      hide();
-    });
-  };
-
-  if ($(".lightbox").length) {
-    lightbox();
-  }
-
   // animations
   // adapted from https://www.sitepoint.com/scroll-based-animations-jquery-css3/
   var animate = $('.animate article'),
