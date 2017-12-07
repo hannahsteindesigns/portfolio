@@ -12,12 +12,12 @@ $(document).ready(function(){
   // adapted from https://www.sourcetoad.com/dev-trends/progressive-loading-of-images/
   var lazyLoad = function(){
     $(".progressive").each(function(){
-      var image = new Image(),
+      var container = $(this),
+          image = new Image(),
           previewImage = $(this).find(".lowres"),
-          newImage = $(this).find(".overlay");
-
+          newImage = $("<img src='' class='overlay' alt='' />")
       image.onload = function(){
-        newImage.attr("src", image.src).css("opacity", "1");
+        newImage.attr("src", image.src).attr("alt", previewImage.attr("alt")).appendTo(container).css("opacity", "1");
         previewImage.css("opacity", "0");
       };
 
@@ -28,6 +28,47 @@ $(document).ready(function(){
 
   if ($(".progressive").length) {
     lazyLoad();
+  }
+
+  // lightbox
+  var lightbox = function(){
+    $(".lightbox").click(function(e){
+      e.preventDefault();
+      var image = new Image(),
+          container = $("#lightbox"),
+          thumbnail = $(this).find(".thumbnail"),
+          full = $("<img class='full' src='' />");
+      $("#lightbox-container").fadeIn();
+      image.onload = function(){
+        full.attr("src", image.src).appendTo(container);
+        $(".loading").hide();
+      };
+
+      image.src = thumbnail.data("image")
+
+    });
+
+    var hide = function(){
+      $("#lightbox-container").fadeOut(function(){
+        $(".full").remove();
+      });
+    };
+
+    $("#lightbox-container").click(function(e){
+      e.preventDefault();
+      var clicked = $(e.target),
+          lightbox = $("#lightbox");
+      if (clicked.is(lightbox) || clicked.parents().is(lightbox)) {
+        return
+      } else { hide(); }
+    });
+    $("#lightbox .close").click(function(){
+      hide();
+    });
+  };
+
+  if ($(".lightbox").length) {
+    lightbox();
   }
 
   // animations

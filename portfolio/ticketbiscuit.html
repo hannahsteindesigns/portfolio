@@ -42,7 +42,9 @@
     <article class="overview text-center">
       <h2>purchase process redesign</h2>
       <h5>in-house designer &amp; developer at TicketBiscuit LLC</h5>
-      <img src="../images/case-study/ticketbiscuit/mockup-small.png" height="600px" />
+      <a class="lightbox" href="#">
+        <img class="thumbnail" src="../images/case-study/ticketbiscuit/mockup-small.png" height="600px" data-image="../images/case-study/ticketbiscuit/mockup-large.png"/>
+      </a>
     </article>
     <article id="challenge" class="slide">
       <h3 class="red text-center">challenge</h3>
@@ -59,21 +61,33 @@
         <div class="cell l-third">
           <h6>research</h6>
           <div class="cell l-half grid">
-            <div class="cell m-half l-full"><img src="../images/case-study/ticketbiscuit/research.jpg"/></div>
+            <div class="cell m-half l-full">
+              <a class="lightbox" href="#">
+                <img class="thumbnail" src="../images/case-study/ticketbiscuit/research.jpg" data-image="../images/case-study/ticketbiscuit/research.jpg"/>
+              </a>
+            </div>
             <p class="cell m-half l-full">The team shut ourselves in a conference room for a week and went through a condensed design sprint. We went over our current process, researched trends and competitors, and came up with extensive notes and sketches. We created personas representing various types of our users so we could address each of their needs as we made UI decisions.</p>
           </div>
         </div>
         <div class="cell l-third">
           <h6>prototype</h6>
           <div class="cell l-half grid">
-            <div class="cell m-half l-full"><img src="../images/case-study/ticketbiscuit/prototype.png"/></div>
+            <div class="cell m-half l-full">
+              <a class="lightbox" href="#">
+                <img class="thumbnail" src="../images/case-study/ticketbiscuit/prototype.png" data-image="../images/case-study/ticketbiscuit/prototype.png"/>
+              </a>
+            </div>
             <p class="cell m-half l-full">I created some rough grayscale wireframes to show the basic functionality. When we agreed on that, I added color and iterated through hundreds of screens to nail down a design. I then used those to create detailed interactive prototypes for mobile and desktop to use for testing.</p>
           </div>
         </div>
         <div class="cell l-third">
           <h6>build</h6>
           <div class="cell l-half grid">
-            <div class="cell m-half l-full"><img src="../images/case-study/ticketbiscuit/build.png"/></div>
+            <div class="cell m-half l-full">
+              <a class="lightbox" href="#">
+                <img class="thumbnail" src="../images/case-study/ticketbiscuit/build.png" data-image="../images/case-study/ticketbiscuit/build.png"/>
+              </a>
+            </div>
             <p class="cell m-half l-full">Once the design was approved, I worked with back-end developers to bring it to life. I started by building styles and static HTML elements, which my coworker then replaced with dynamic C#. I also added scripts to enhance interactions: animating changes, using HTML5 input types, implementing front-end validation, and masking input fields.</p>
           </div>
         </div>
@@ -173,5 +187,11 @@
     </div>
   </footer>
   <script src="../js/scripts.js"></script>
+  <div id="lightbox-container">
+    <div id="lightbox">
+      <a class="close"><i class="fa fa-times fa-2x" aria-label="close"></i></a>
+      <span class="loading"><i class="fa fa-spinner fa-pulse fa-3x" aria-label="image loading"></i></span>
+    </div>
+  </div>
 </body>
 </html>

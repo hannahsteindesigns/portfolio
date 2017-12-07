@@ -42,7 +42,9 @@
     <article class="overview text-center">
       <h2>logo &amp; website designs</h2>
       <h5>freelance designer for <a href="http://transcendcounseling.org/" target="_blank">Transcend Family &amp; Individual Counseling</a></h5>
-      <img src="../images/case-study/transcend/mockup-small.png" height="600px" />
+      <a class="lightbox" href="#">
+        <img class="thumbnail" src="../images/case-study/transcend/mockup-small.png" height="600px" data-image="../images/case-study/transcend/mockup-large.png"/>
+      </a>
     </article>
     <article id="challenge" class="slide">
       <h3 class="red text-center">challenge</h3>
@@ -69,10 +71,14 @@
           <p class="note text-center"><span class="l-show">(right)</span> final page designs:</p>
         </div>
         <div class="cell m-half l-third text-center">
-          <img class="contain" src="../images/case-study/transcend/frontpage.png" alt="site home page"/>
+          <a class="lightbox" href="#">
+            <img class="thumbnail contain" alt="site home page" src="../images/case-study/transcend/frontpage.png" data-image="../images/case-study/transcend/frontpage-full.png"/>
+          </a>
         </div>
         <div class="cell m-half l-third text-center">
-          <img class="contain" src="../images/case-study/transcend/subpage.png" alt="site content page"/>
+          <a class="lightbox" href="#">
+            <img class="thumbnail contain" alt="site content page" src="../images/case-study/transcend/subpage.png" data-image="../images/case-study/transcend/subpage-full.png"/>
+          </a>
         </div>
       </section>
     </article>
@@ -175,5 +181,11 @@
     </div>
   </footer>
   <script src="../js/scripts.js"></script>
+  <div id="lightbox-container">
+    <div id="lightbox">
+      <a class="close"><i class="fa fa-times fa-2x" aria-label="close"></i></a>
+      <span class="loading"><i class="fa fa-spinner fa-pulse fa-3x" aria-label="image loading"></i></span>
+    </div>
+  </div>
 </body>
 </html>
