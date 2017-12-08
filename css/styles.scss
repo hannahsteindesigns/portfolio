@@ -164,7 +164,7 @@ img + .note {
 }
 
 // no flexbox
-.no-flex {
+.update {
   header > div {
     display: block;
     h1 {
@@ -177,10 +177,9 @@ img + .note {
       text-align: right;
     }
   }
-}
-
-.no-flex footer .social a {
-  display: block;
+  footer .social a {
+    display: block;
+  }
 }
 
 // page styles

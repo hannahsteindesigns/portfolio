@@ -172,16 +172,15 @@ img + .note {
     .l-show {
       display: inline-block; } }
 
-.no-flex header > div {
+.update header > div {
   display: block; }
-  .no-flex header > div h1 {
+  .update header > div h1 {
     display: inline-block; }
-  .no-flex header > div .mobile-nav {
+  .update header > div .mobile-nav {
     float: right; }
-  .no-flex header > div nav {
+  .update header > div nav {
     text-align: right; }
-
-.no-flex footer .social a {
+.update footer .social a {
   display: block; }
 
 /* ===== grid ===== */
