@@ -151,3 +151,17 @@ $(document).ready(function(){
 		});
   };
 });
+
+/* detect flex support & redirect */
+// detect adapted from http://johanronsse.be/2016/01/03/simple-flexbox-check/
+var detectFlex = function(){
+  var doc = document.documentElement,
+      f = doc.style.flex,
+      fw = doc.style.webkitFlex;
+      ( f === "" || fw === "" ) ? doc.className = "flex" : doc.className = "no-flex";
+
+      if ($(doc).hasClass("no-flex")) {
+        window.location.replace("http://dev.hannahsteindesigns.com/update.html");
+      }
+};
+detectFlex();

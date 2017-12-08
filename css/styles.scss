@@ -83,6 +83,14 @@ p {
   font-size: 1em;
   line-height: 1.25;
   margin-bottom: 1.5em;
+  &.small {
+    font-size: .75em;
+    line-height: 1em;
+  }
+  &.large {
+    font-size: 1.25em;
+    line-height: 1.5em;
+  }
 }
 
 // links
@@ -153,6 +161,26 @@ img + .note {
   @include responsiveMin(60em) {
     display: inline-block;
   }
+}
+
+// no flexbox
+.no-flex {
+  header > div {
+    display: block;
+    h1 {
+      display: inline-block;
+    }
+    .mobile-nav {
+      float: right;
+    }
+    nav {
+      text-align: right;
+    }
+  }
+}
+
+.no-flex footer .social a {
+  display: block;
 }
 
 // page styles
