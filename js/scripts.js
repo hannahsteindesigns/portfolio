@@ -8,7 +8,31 @@ $(document).ready(function(){
     $("nav").slideToggle()
   });
 
-  // progressive image loading
+  /* scroll to top */
+  var scrolling = false,
+      showArrow = function(){
+        ($(window).scrollTop() > 300) ? $("#scrollTop").fadeIn() : $("#scrollTop").fadeOut();
+      };
+  $(window).scroll(function(){ scrolling = true; });
+  setInterval(function(){
+    if (scrolling) {
+      scrolling = false;
+      showArrow();
+    }
+  }, 250);
+  showArrow();
+  $("#scrollTop").click(function(){
+    $("html,body").animate({
+      scrollTop: 0
+    }, 600);
+  });
+  // break out of script scrolling on user scroll
+  $("html,body").bind("DOMMouseScroll touchmove wheel", function(e){
+    scrolling = false;
+    $("html,body").stop();
+  });
+
+  /* progressive image loading */
   // adapted from https://www.sourcetoad.com/dev-trends/progressive-loading-of-images/
   var lazyLoad = function(){
     $(".progressive").each(function(){
@@ -30,7 +54,7 @@ $(document).ready(function(){
     lazyLoad();
   }
 
-  // animations
+  /* animations */
   // adapted from https://www.sitepoint.com/scroll-based-animations-jquery-css3/
   var animate = $('.animate article'),
       $window = $(window),

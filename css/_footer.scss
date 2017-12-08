@@ -145,5 +145,19 @@ input:-webkit-autofill,
 textarea:-webkit-autofill {
   @include prefix((
     box-shadow: 0 0 0px 1000px $light-grey inset !important
-  ), webkit)
+  ), webkit);
+}
+#scrollTop {
+  background-color: $teal;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba($dark-grey, .5);
+  bottom: .5em;
+  color: #FFF;
+  cursor: pointer;
+  display: none;
+  font-size: 1.5em;
+  line-height: .75em;
+  padding: .75em;
+  position: fixed;
+  right: 1em;
 }
