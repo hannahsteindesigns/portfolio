@@ -16,12 +16,13 @@
   <!-- styles & images -->
   <script src="https://use.fontawesome.com/1d1e476666.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700" rel="stylesheet">
-  <link href="../css/styles.css" rel="stylesheet">
+  <link href="../css/styles.min.css" rel="stylesheet">
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
   <!-- scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+  <script src="../js/simpleLightbox.min.js"></script>
 </head>
 
 <body>
@@ -40,19 +41,19 @@
   <!-- content -->
   <section id="content" class="width case animate fade">
     <article class="overview">
-      <p>As a front-end developer and designer at TicketBiscuit, I create designs and maintain pages for both the public-facing ticket-buying website and the client-facing admin portal.</p>
+      <p>As a front-end developer and designer at TicketBiscuit, I create designs and maintain pages for both the public-facing ticket-buying website and the client-facing admin portal. Some of my projects are listed below.</p>
     </article>
     <article class="slide">
       <h3 class="red">Registration &amp; Authentication Flow</h3>
-      <div class="grid">
-        <div class="cell m-half s-full margin-bottom-20">
+      <div class="lightbox grid">
+        <a class="cell m-half s-full margin-bottom-20" href="../images/case-study/tb-projects/registration-old.png">
           <img src="../images/case-study/tb-projects/registration-old.png" />
-          <div class="note text-center">before</div>
-        </div>
-        <div class="cell m-half s-full margin-bottom-20">
+          <span class="note text-center display-block">before</span>
+        </a>
+        <a class="cell m-half s-full margin-bottom-20" href="../images/case-study/tb-projects/registration-new.png">
           <img src="../images/case-study/tb-projects/registration-new.png" />
-          <div class="note text-center">after</div>
-        </div>
+          <span class="note text-center display-block">after</span>
+        </a>
       </div>
       <p>In addition to a redesign, I also reworked the registration flow. Previously, new users weren't required to set a password upon registration. This caused a lot of confusion if they returned to the site without ever setting their password and kept the call center busy with password help. I got rid of the unnecessary confirm email field since it's been shown that most users simply <a href="http://uxmovement.com/forms/why-the-email-confirmation-field-must-die/" title="confirm email ux">copy and paste their address</a> from the original email field. I also included a button allowing users to show and hide their password on both registration and login in order to <a href="https://www.nngroup.com/articles/stop-password-masking/" title="password masking ux">reduce errors and increase conversions</a>.</p>
     </article>
@@ -78,16 +79,24 @@
     <article class="slide">
       <h3 class="red">Reward Guide Redesign</h3>
       <p>The reward guide needed a facelift to make it more modern and easier to understand. I added some gas gauges to visualize the reward guidelines and rearranged the page so it flows better and reads more like a sentence.</p>
-      <div class="grid">
+      <div class="lightbox grid">
         <div class="cell m-half s-full margin-bottom-10">
-          <img class="margin-bottom-10" src="../images/case-study/tb-projects/offers-multiple-old.png" />
-          <img src="../images/case-study/tb-projects/offers-old.png" />
           <div class="note text-center">before</div>
+          <a href="../images/case-study/tb-projects/offers-multiple-old.png">
+            <img class="margin-bottom-10" src="../images/case-study/tb-projects/offers-multiple-old.png" />
+          </a>
+          <a href="../images/case-study/tb-projects/offers-old.png">
+            <img class="margin-bottom-10" src="../images/case-study/tb-projects/offers-old.png" />
+          </a>
         </div>
         <div class="cell m-half s-full margin-bottom-10">
-          <img class="margin-bottom-10" src="../images/case-study/tb-projects/offers-multiple-new.png" />
-          <img src="../images/case-study/tb-projects/offers-new.png" />
           <div class="note text-center">after</div>
+          <a href="../images/case-study/tb-projects/offers-old.png">
+            <img class="margin-bottom-10" src="../images/case-study/tb-projects/offers-multiple-new.png" />
+          </a>
+          <a href="../images/case-study/tb-projects/offers-new.png">
+            <img src="../images/case-study/tb-projects/offers-new.png" />
+          </a>
         </div>
       </div>
     </article>
@@ -154,5 +163,6 @@
   </footer>
   <div id="scrollTop"><i class="fa fa-arrow-up" aria-label="back to top"></i></div>
   <script src="../js/scripts.min.js"></script>
+  <script>$(".lightbox a").simpleLightbox();</script>
 </body>
 </html>

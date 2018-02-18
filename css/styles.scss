@@ -122,7 +122,7 @@ button,
   letter-spacing: .5px;
   padding: 1em 1.25em;
   transition: all .5s;
-  &:hover {
+  &:hover, &:focus, &:active {
     background-color: lighten($teal, 5%);
     color: #FFF;
     transition: all .5s;
@@ -140,10 +140,14 @@ button,
 .note {
   font-style: italic;
   font-size: .875em !important;
+  + img, + video {
+    margin-top: 1em;
+  }
 }
-img + .note,
-video + .note {
-  margin-top: 1em;
+img, video {
+  + .note {
+      margin-top: 1em;
+  }
 }
 .nobreak {
   white-space: nowrap;
@@ -203,6 +207,27 @@ video + .note {
   }
   footer .social a {
     display: block;
+  }
+}
+
+// aside
+aside {
+  border-top: 4px double $dark-grey;
+  border-bottom: 4px double $dark-grey;
+  margin-top: 4em;
+  text-align: center;
+  width: 100%;
+  a {
+    color: $dark-grey;
+    transition: color 500ms;
+    h5 {
+      padding: .25em;
+      margin: 1em;
+    }
+    &:hover, &:focus, &:active {
+      color: $red;
+      transition: color 500ms;
+    }
   }
 }
 

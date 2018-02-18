@@ -70,11 +70,12 @@
   }
 }
 
-.lightbox a {
+.lightbox > a {
   color: $dark-grey;
   border-bottom: none;
   cursor: pointer;
   &:hover, &:focus, &:active {
     border-bottom: none;
+    opacity: .5;
   }
 }
