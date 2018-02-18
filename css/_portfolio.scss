@@ -52,4 +52,23 @@
       }
     }
   }
+  aside {
+    border-top: 4px double $dark-grey;
+    border-bottom: 4px double $dark-grey;
+    margin-top: 4em;
+    text-align: center;
+    width: 100%;
+    a {
+      color: $dark-grey;
+      transition: color 500ms;
+      h5 {
+        padding: .25em;
+        margin: 1em;
+      }
+      &:hover, &:focus, &:active {
+        color: $red;
+        transition: color 500ms;
+      }
+    }
+  }
 }

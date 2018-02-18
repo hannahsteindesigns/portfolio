@@ -141,7 +141,8 @@ button,
   font-style: italic;
   font-size: .875em !important;
 }
-img + .note {
+img + .note,
+video + .note {
   margin-top: 1em;
 }
 .nobreak {
@@ -160,6 +161,29 @@ img + .note {
   display: none;
   @include responsiveMin(60em) {
     display: inline-block;
+  }
+}
+.margin {
+  &-top {
+    &-10 {
+      margin-top: 1em;
+    }
+    &-20 {
+      margin-top: 2em;
+    }
+  }
+  &-bottom {
+    &-10 {
+      margin-bottom: 1em;
+    }
+    &-20 {
+      margin-bottom: 2em;
+    }
+  }
+}
+.display {
+  &-block {
+    display: block;
   }
 }
 
@@ -190,5 +214,6 @@ img + .note {
 @import "about";
 @import "footer";
 @import "animate";
+@import "simpleLightbox";
 
 /* == Do not mistake temptation for opportunity. == */

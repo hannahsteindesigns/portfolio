@@ -12,6 +12,9 @@
       width: auto;
     }
   }
+  video {
+    @extend %img;
+  }
   .overview {
     margin: 0 auto 5em;
   }
@@ -64,5 +67,14 @@
   }
   .pager {
     @include flexbox();
+  }
+}
+
+.lightbox a {
+  color: $dark-grey;
+  border-bottom: none;
+  cursor: pointer;
+  &:hover, &:focus, &:active {
+    border-bottom: none;
   }
 }
