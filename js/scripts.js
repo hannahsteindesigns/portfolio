@@ -8,6 +8,13 @@ $(document).ready(function(){
     $("nav").slideToggle()
   });
 
+  // load partials
+  var includes = $('[data-include]');
+  jQuery.each(includes, function(){
+    var file = 'partials/' + $(this).data('include') + '.html';
+    $(this).load(file);
+  });
+
   /* scroll to top */
   var scrolling = false,
       showArrow = function(){
