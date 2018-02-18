@@ -140,15 +140,9 @@ button,
 .note {
   font-style: italic;
   font-size: .875em !important;
-  + img, + video {
-    margin-top: 1em;
-  }
+  margin: 1em 0;
 }
-img, video {
-  + .note {
-      margin-top: 1em;
-  }
-}
+
 .nobreak {
   white-space: nowrap;
 }

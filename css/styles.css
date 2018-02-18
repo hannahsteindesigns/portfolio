@@ -151,12 +151,8 @@ button,
 
 .note {
   font-style: italic;
-  font-size: .875em !important; }
-  .note + img, .note + video {
-    margin-top: 1em; }
-
-img + .note, video + .note {
-  margin-top: 1em; }
+  font-size: .875em !important;
+  margin: 1em 0; }
 
 .nobreak {
   white-space: nowrap; }
@@ -462,11 +458,11 @@ header {
     flex-flow: row wrap;
     justify-content: space-between; }
 
-.lightbox > a {
+.lightbox .lbSlide {
   color: #666;
   border-bottom: none;
   cursor: pointer; }
-  .lightbox > a:hover, .lightbox > a:focus, .lightbox > a:active {
+  .lightbox .lbSlide:hover, .lightbox .lbSlide:focus, .lightbox .lbSlide:active {
     border-bottom: none;
     opacity: .5; }
 
