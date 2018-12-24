@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52747973-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-52747973-1');
+  </script>
+  <title>hannah stein designs</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1, maximum-scale=2, user-scalable=yes, minimum-scale=1">
+  <!-- styles & images -->
+  <script src="https://use.fontawesome.com/1d1e476666.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700" rel="stylesheet">
+  <link href="../css/styles.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <!-- scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <div class="width">
+      <h1><a href="/">Hannah Stein</a></h1>
+        <a class="mobile-nav" title="toggle menu"><span></span></a>
+        <nav>
+          <a href="/" title="portfolio" class="active">portfolio</a>
+          <a href="../about.html" title="about">about</a>
+          <a href="#contact" title="contact">contact</a>
+        </nav>
+    </div>
+    </header>
+  <!-- content -->
+  <section id="content" class="width case animate fade">
+    <article class="overview text-center">
+      <h2>purchase process redesign</h2>
+      <h5>in-house designer &amp; developer at TicketBiscuit LLC</h5>
+      <div class="progressive img">
+        <img class="lowres" src="../images/case-study/ticketbiscuit/mockup-small.png" height="600px" data-image="../images/case-study/ticketbiscuit/mockup-large.png"/>
+      </div>
+    </article>
+    <article id="challenge" class="slide">
+      <h3 class="red text-center">challenge</h3>
+      <p>The ticket-buying interface remained largely unchanged since the TicketBiscuit platform was developed about 15 years ago. Users had to click through anywhere from four to six pages before completing their transaction. The UI was initially created by back-end developers and was largely table-based. I was tasked with simplifying this process and modernizing it in both form and function without losing any functionality or disorienting returning users.</p>
+      <section class="grid gutters text-center">
+        <div class="cell m-auto"><img src="../images/case-study/ticketbiscuit/legacy-1.png" width="346px" height="400px"/></div>
+        <div class="cell m-auto"><img src="../images/case-study/ticketbiscuit/legacy-2.png" width="346px" height="400px"/></div>
+        <p class="cell full note">examples of components before my update</p>
+      </section>
+    </article>
+    <aside class="borders">
+      <div class="content">
+        <a href="tb-projects.html" title="View more TicketBiscuit projects" class="ignore"><h5>Ready for even more ticketing goodness? Check out some of my other TicketBiscuit projects. <i class="fa fa-arrow-right" aria-hidden="true"></i></h5></a>
+      </div>
+    </aside>
+    <article id="process" class="slide">
+      <h3 class="red text-center">process</h3>
+      <section class="grid gutters">
+        <div class="cell l-third">
+          <h6>research</h6>
+          <div class="cell l-half grid">
+            <div class="cell m-half l-full">
+              <div class="progressive img">
+                <img class="lowres" src="../images/case-study/ticketbiscuit/research.jpg" data-image="../images/case-study/ticketbiscuit/research.jpg"/>
+              </div>
+            </div>
+            <p class="cell m-half l-full">The team shut ourselves in a conference room for a week and went through a condensed design sprint. We went over our current process, researched trends and competitors, and came up with extensive notes and sketches. We created personas representing various types of our users so we could address each of their needs as we made UI decisions.</p>
+          </div>
+        </div>
+        <div class="cell l-third">
+          <h6>prototype</h6>
+          <div class="cell l-half grid">
+            <div class="cell m-half l-full">
+              <img src="../images/case-study/ticketbiscuit/prototype.png"/>
+            </div>
+            <p class="cell m-half l-full">I created some rough grayscale wireframes to show the basic functionality. When we agreed on that, I added color and iterated through hundreds of screens to nail down a design. I then used those to create detailed interactive prototypes for mobile and desktop to use for testing.</p>
+          </div>
+        </div>
+        <div class="cell l-third">
+          <h6>build</h6>
+          <div class="cell l-half grid">
+            <div class="cell m-half l-full">
+              <img src="../images/case-study/ticketbiscuit/build.png"/>
+            </div>
+            <p class="cell m-half l-full">Once the design was approved, I worked with back-end developers to bring it to life. I started by building styles and static HTML elements, which my coworker then replaced with dynamic C#. I also added scripts to enhance interactions: animating changes, using HTML5 input types, implementing front-end validation, and masking input fields.</p>
+          </div>
+        </div>
+     </section>
+    </article>
+    <article id="solution" class="slide">
+      <h3 class="red text-center">solution</h3>
+      <div class="banner">
+        <video poster="../images/case-study/ticketbiscuit/purchase-process.png" muted autoplay controls loop>
+          <source src="../images/case-study/ticketbiscuit/purchase-process.mp4">
+        </video>
+      </div>
+      <p>I decided on a card-based layout to allow modernization of the UI while preserving the modular nature of the existing components. Each card is collapsible and displays a summary of its information when collapsed. Cards that need user input are automatically expanded when going to checkout, while those that don't are collapsed by default. This means returning users can get to the checkout page, review the information on their collapsed cards, and click pay in a matter of seconds.</p>
+      <p>I looked at our analytics to determine which browser versions we should support and what features could be integrated. Since about 55% of our users access the site via mobile device, I focused on mobile optimization. This page is form-heavy, so I implemented changes to make filling out these forms easier for our users. HTML5 input types trigger the correct keyboard on mobile devices, while input masking makes input data easier to scan. I applied masking to the credit card number, expiration date, CCV code, phone number, and postal code fields as well as instant front-end validation for these and all required elements. Since we have some customers outside the US, phone number and postal code field validation patterns are dynamic based on the selected country. The form supports validation for the US, Canada, and the UK.</p>
+      <p>Back-end developers implemented my new total cost design that updates automatically based on decisions made in the checkout cards. I also made the ticket purchase timer more conspicuous so it didn't get lost on the page and created a new, separate cart page that can be accessed outside the purchase process. Since the screen can become very long on mobile, I made the pay button float near the bottom of the screen so it's always within reach. Lastly, I used some jQuery and CSS3 transitions to animate interactions for a smoother user experience.</p>
+    </article>
+    <article id="results" class="slide">
+      <h3 class="red text-center">results</h3>
+      <section class="grid gutters text-center stretch">
+        <div class="cell m-third">
+          <h1 class="teal">30.79%</h1>
+          <p>more than 30% increase in conversion rates, <span class="break"></span>from 16.5% to 21.58%</p>
+        </div>
+        <div class="cell m-third">
+          <h1 class="teal">6 pages</h1>
+          <p>maximum six pages condensed into one, <span class="break"></span>reducing clicks and tech debt</p>
+        </div>
+        <div class="cell m-third">
+          <h1 class="teal">< 1 minute</h1>
+          <p>sub-minute purchase times for the first time <span class="break"></span>since the company began</p>
+        </div>
+      </section>
+    </article>
+    <article class="pager">
+      <a class="prev" href="" title=""></a>
+      <a class="next" href="transcend.html" title="Transcend case study">next case study <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+    </article>
+  </section>
+  <!-- footer -->
+  <footer id="contact">
+    <div class="width">
+      <section>
+        <div class="social">
+          <h2>Let's talk.</h2>
+          <a href="mailto:&#104;&#97;&#110;&#110;&#97;&#104;&#115;&#116;&#101;&#105;&#110;&#100;&#101;&#115;&#105;&#103;&#110;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" title="email me">
+            <span class="fa-stack">
+              <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+              <i class="fa fa-envelope fa-stack-1x" aria-hidden="true"></i>
+            </span>
+            <span>hannahsteindesigns@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/hannahsteindesigns" title="connect on linkedin">
+            <span class="fa-stack">
+              <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+              <i class="fa fa-linkedin fa-stack-1x" aria-hidden="true"></i>
+            </span>
+            <span>linkedin.com/in/hannahsteindesigns</span>
+          </a>
+          <!-- <a href="https://www.behance.net/hannahsteindesigns" title="see more of my work on behance">
+            <img src="images/behance.svg" width="24" />
+            <span>behance.net/hannahsteindesigns</span>
+          </a> -->
+          <a href="https://github.com/hannahsteindesigns/" title="see my original files on github">
+            <span class="fa-stack">
+              <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+              <i class="fa fa-github fa-stack-1x" aria-hidden="true"></i>
+            </span>
+            <span>github.com/hannahsteindesigns</span>
+          </a>
+          <a href="https://issuu.com/hannahsteindesigns" title="see more of my print work on issuu">
+            <span class="fa-stack">
+              <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+              <i class="fa fa-briefcase fa-stack-1x" aria-hidden="true"></i>
+            </span>
+            <span>issuu.com/hannahsteindesigns</span>
+          </a>
+        </div>
+        <div class="form">
+          <div id="form-messages"></div>
+          <form name="hscontact" id="form" method="post" action="contact.php" novalidate>
+            <div class="name-input">
+              <input required type="text" name="name" id="name">
+              <label for="name" placeholder="Name"></label>
+            </div>
+            <div class="email-input">
+              <input required type="email" name="email" id="email">
+              <label for="email" placeholder="Email"></label>
+            </div>
+            <div class="message-input">
+              <textarea required name="message" id="message"></textarea>
+              <label for="message" placeholder="Send me a message"></label>
+            </div>
+            <button type="submit" id="submit" class="full">Send</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </footer>
+  <div id="scrollTop"><i class="fa fa-arrow-up" aria-label="back to top"></i></div>
+  <script src="../js/scripts.min.js"></script>
+</body>
+</html>

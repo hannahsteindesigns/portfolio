@@ -1,0 +1,238 @@
+/* ===== Portfolio Styles — 11/30/2017 ===== */
+
+@import "mixins";
+@import "reset";
+
+// colors
+$red: #F02E11;
+$dark-grey: #666;
+$light-grey: #F9F9F9;
+$teal: #037569;
+.teal {
+  color: $teal;
+}
+.red {
+  color: $red;
+}
+
+// fonts
+$slab: "Roboto Slab", Georgia, serif;
+$sans: "Roboto", Helvetica, Arial, sans-serif;
+
+// base
+html {
+  background-color: $light-grey;
+}
+body {
+  box-sizing: border-box;
+  color: $dark-grey;
+  font: normal 14px $sans;
+  margin: 0;
+}
+::selection {
+  background-color: lighten($teal, 15%);
+  color: #fff;
+}
+::-moz-selection {
+  background-color: lighten($teal, 15%);
+  color: #fff;
+}
+.width {
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 92%;
+  @include responsiveMin(85em) {
+    width: 100%;
+  }
+}
+
+// text
+%heading {
+  font-family: $slab;
+  font-weight: bold;
+  margin: .5em 0 1em;
+}
+h1 {
+  @extend %heading;
+  font-size: 2.75em;
+}
+h2 {
+  @extend %heading;
+  font-size: 2em;
+}
+h3 {
+  @extend %heading;
+  font-size: 1.5em;
+}
+h4 {
+  @extend %heading;
+  font-size: 1.25em;
+}
+h5 {
+  @extend %heading;
+  font-size: 1em;
+}
+h6 {
+  @extend %heading;
+  font-family: $sans;
+  font-size: 1em;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+p {
+  font-size: 1em;
+  line-height: 1.25;
+  margin-bottom: 1.5em;
+  &.small {
+    font-size: .75em;
+    line-height: 1em;
+  }
+  &.large {
+    font-size: 1.25em;
+    line-height: 1.5em;
+  }
+}
+
+// links
+a {
+  border-bottom: 1px dotted transparent;
+  color: $red;
+  opacity: 1;
+  text-decoration: none;
+  transition: border .3s, opacity .3s;
+  &:hover, &:focus, &:active {
+    border-color: $dark-grey;
+    opacity: .75;
+    outline: none;
+    transition: border .3s, opacity .3s;
+  }
+  header & {
+    color: $dark-grey;
+  }
+}
+
+// buttons
+button,
+.button {
+  background-color: $teal;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba($dark-grey, .5);
+  color: #FFF;
+  cursor: pointer;
+  letter-spacing: .5px;
+  padding: 1em 1.25em;
+  transition: all .5s;
+  &:hover, &:focus, &:active {
+    background-color: lighten($teal, 5%);
+    color: #FFF;
+    transition: all .5s;
+  }
+  &.full {
+    width: 100%;
+  }
+}
+
+// helpers
+.stress {
+  color: $teal;
+  font-weight: bold;
+}
+.note {
+  font-style: italic;
+  font-size: .875em !important;
+  margin: 1em 0;
+}
+
+.nobreak {
+  white-space: nowrap;
+}
+.break {
+  display: block;
+  @include responsiveMin(35em) {
+    display: inline;
+  }
+}
+.text-center {
+  text-align: center;
+}
+.l-show {
+  display: none;
+  @include responsiveMin(60em) {
+    display: inline-block;
+  }
+}
+.margin {
+  &-top {
+    &-10 {
+      margin-top: 1em;
+    }
+    &-20 {
+      margin-top: 2em;
+    }
+  }
+  &-bottom {
+    &-10 {
+      margin-bottom: 1em;
+    }
+    &-20 {
+      margin-bottom: 2em;
+    }
+  }
+}
+.display {
+  &-block {
+    display: block;
+  }
+}
+
+// no flexbox
+.update {
+  header > div {
+    display: block;
+    h1 {
+      display: inline-block;
+    }
+    .mobile-nav {
+      float: right;
+    }
+    nav {
+      text-align: right;
+    }
+  }
+  footer .social a {
+    display: block;
+  }
+}
+
+// aside
+aside.borders {
+  border-top: 4px double $dark-grey;
+  border-bottom: 4px double $dark-grey;
+  margin-top: 4em;
+  text-align: center;
+  width: 100%;
+  a {
+    color: $dark-grey;
+    transition: color 500ms;
+    h5 {
+      padding: .25em;
+      margin: 1em;
+    }
+    &:hover, &:focus, &:active {
+      color: $red;
+      transition: color 500ms;
+    }
+  }
+}
+
+// page styles
+@import "grid";
+@import "header";
+@import "portfolio";
+@import "cases";
+@import "about";
+@import "footer";
+@import "animate";
+@import "simpleLightbox";
+
+/* == Do not mistake temptation for opportunity. == */

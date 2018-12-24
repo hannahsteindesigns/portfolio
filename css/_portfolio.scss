@@ -1,0 +1,55 @@
+/* ===== portfolio ===== */
+.portfolio {
+  > article {
+    @include flexbox($justify-content: center);
+    box-sizing: border-box;
+    margin: 7em 0;
+    min-width: 300px;
+    @include responsiveMin(60em) {
+      justify-content: space-between;
+      margin: 10em 0;
+    }
+    &:first-of-type {
+      margin-top: 5em;
+    }
+    &.right {
+      flex-flow: row-reverse;
+      flex-wrap: wrap;
+    }
+    h3 {
+      margin-top: 0;
+    }
+    .img {
+      &:hover, &:active {
+        border-color: transparent;
+        opacity: 1;
+      }
+    }
+    img {
+      box-shadow: 0 2px 4px rgba($dark-grey, .5);
+      flex: 0 1 100%;
+      height: auto;
+      margin-bottom: 1em;
+      max-width: 600px;
+      width: 100%;
+      @include responsiveMin(60em) {
+        flex: 0 1 62%;
+        margin-bottom: 0;
+      }
+    }
+    .details {
+      flex: 0 1 100%;
+      @include responsiveMin(60em) {
+        flex: 0 1 30%;
+      }
+    }
+    .button {
+      display: block;
+      text-align: center;
+      @include responsiveMin(32em) {
+        display: inline-block;
+        text-align: left;
+      }
+    }
+  }
+}

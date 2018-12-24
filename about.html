@@ -1,134 +1,117 @@
 <!doctype html>
 <html>
 <head>
-  <title>about me - hannah stein designs</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52747973-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-52747973-1');
+  </script>
+  <title>hannah stein designs | about</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1, maximum-scale=2, user-scalable=yes">    
+  <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1, maximum-scale=2, user-scalable=yes, minimum-scale=1">
   <!-- styles & images -->
-  <link rel="stylesheet" href="css/style.css"> 
+  <script src="https://use.fontawesome.com/1d1e476666.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700" rel="stylesheet">
+  <link href="css/styles.min.css" rel="stylesheet">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-52747973-1', 'auto');
-  ga('send', 'pageview');
-  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
 </head>
 
 <body>
   <!-- header -->
-  <header id="header" class="width">
-    <a href="/" class="logo left"><img src="images/HSD-logo.png" width="200" alt="Hannah Stein design and development" /></a>
-      <a class="mobile-nav right" title="toggle menu">
-      	<span></span>
-      </a>
-      <nav class="nav right">
-        <ul>
-          <li><a href="/" title="portfolio">portfolio</a></li>
-          <li><a href="about.html" title="about" class="active">about</a></li>
-          <li><a href="contact.html" title="contact">contact</a></li>
-        </ul>
-      </nav>
+  <header>
+    <div class="width">
+      <h1><a href="/">Hannah Stein</a></h1>
+        <a class="mobile-nav" title="toggle menu"><span></span></a>
+        <nav>
+          <a href="/" title="portfolio">portfolio</a>
+          <a href="#" title="about" class="active">about</a>
+          <a href="#contact" title="contact">contact</a>
+        </nav>
+    </div>
     </header>
-    <div class="clear"></div>
   <!-- content -->
-  <section id="content" class="width">
-    <h1>About Me</h1>
-    <img src="images/selfie-square.jpg" alt="Hannah" width="225" class="bio-image right"/>
-    <a href="images/Stein-resume.pdf" alt="Download PDF resume" target="_blank">Download PDF resume.</a>
-    <p><span class="intro">Location:</span>Birmingham, Alabama</p>
-    <p><span class="intro">Education:</span>BFA, University of Montevallo, May 2014</p>
-    <p class="bio">I'm a <span class="highlight">problem-solver,</span> with roots in print design and branches in the web.</p>
-    <p class="bio">In my current job at <a href="kinetic.com">Kinetic Communications</a>, I design websites for clients, as well as build sites based on designs created by myself or another designer. I work on custom Wordpress themes, user experience design, HTML emails, social media content, and anything else they ask me to do. I'm a <span class="highlight">quick learner.</span> </p>
-    <p class="bio">As a freelancer, I work with a lot of small businesses and nonprofit groups, becasuse they shouldn't have to sacrifice presenting themselves in a <span class="highlight">professional,</span> appealing way for lack of a big-business budget. Given a basis of good design principles, everything else is <span class="highlight">scalable.</span> I like figuring out how people think, which tells me a lot about the way they <span class="highlight">interact</span> with design, even on a subconscious level. The <span class="highlight">human element</span> is what makes bad design terrible — and good design great.</p>
-    <div class="process">
-    </div>    
-    <div class="skills">
-      <div class="superpowers left">
-        <h2>Superpowers:</h2>
-        <div class="icon-border" data-description="structured, semantic content"><div class="icon">&lt;HTML5/&gt;</div></div>
-        <div class="icon-border" data-description="stylized, animated elements"><div class="icon">.CSS3{}</div></div>
-        <div class="break left"></div>
-        <div class="icon-border" data-description="dynamic, intuitive events"><div class="icon">jQuery();</div></div>
-        <div class="icon-border" data-description="custom Wordpress themes &amp; editable content"><div class="icon">&lt;?PHP&gt;</div></div>
-        <div class="clear"></div>        
-        <div class="description"></div>
+  <section id="content" class="width about">
+    <h2 class="text-center">about me</h2>
+    <article class="bio">
+      <div>
+        <p>I'm a <span class="stress">front-end developer</span> and <span class="stress">designer</span>. I take projects from initial sketches through static wireframes and basic prototypes all the way to the live finished product.</p>
+        <p>I work at <span class="stress">TicketBiscuit</span> in Birmigham, Alabama, where I create and update designs for both a public-facing <span class="nobreak">ecommerce</span> platform and a client-facing dashboard. I also design interfaces for our various branded mobile apps on iOS and Android.</p>
+        <p>My roots are in print design, but these days almost everything is on the web &mdash; including my work. I'm increasingly passionate about <span class="stress">user experience</span> as the guiding principle for everything I create.</p>
+        <p><a href="images/Stein-resume.pdf" alt="Hannah's resume" target="_blank">Download my PDF resume.</a></p>
       </div>
-      <div class="clear"></div>
-      <div class="tool-kit left">
-        <h2>Adobe Tool Kit:</h2>
-        <div class="icon-border" data-description="Illustrator"><div class="icon">Ai</div></div>
-        <div class="icon-border" data-description="Photoshop"><div class="icon">Ps</div></div>
-        <div class="break left"></div>        
-        <div class="icon-border" data-description="InDesign"><div class="icon">Id</div></div>
-        <div class="icon-border" data-description="Experience Design"><div class="icon">Xd</div></div>
-        <div class="clear"></div>
-        <div class="description"></div>
-      </div>
-      <div class="clear"></div>
-      <div class="bonus">
-        <h2>As a Bonus:</h2>
-        <p>(some other things I'm good at)</p>
-        <ul class="bonus">
-          <li>Cross-browser testing</li>
-          <li>Graceful degradation</li>
-          <li>Version control in Git</li>
-          <li>HTML email standards &amp; limitations</li>
-          <li>Experience with Bootstrap, AngularJS, C#</li>
-          <li>Interactive documents with Acrobat Pro</li>
-          <li>Copywriting, copy editing, AP style</li>
-          <li>Harry Potter trivia</li>
-          <li>Communicating with cats</li>
-          <li>Crossword puzzles</li>
-        </ul>
-      </div>
-  </div>
+      <aside>
+        <img src="images/selfie-square.jpg" title="Hannah Stein" />
+      </aside>
+    </article>
   </section>
-
-  <div class="clear"></div>
   <!-- footer -->
-  <footer id="footer" class="width">
-    <div class="social">
-      <a href="mailto:&#104;&#97;&#110;&#110;&#97;&#104;&#115;&#116;&#101;&#105;&#110;&#100;&#101;&#115;&#105;&#103;&#110;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" title="email me"><img src="images/email.svg" alt="email" width="42" /></a>
-      <a href="https://www.linkedin.com/pub/hannah-stein/76/978/1b8" title="connect on linkedin"><img src="images/linkedin.svg" alt="linkedin" width="42" /></a>
-      <a href="https://www.issuu.com/hannahsteindesigns" title="see my print portfolio"><img src="images/issuu.svg" alt="issuu" width="42" /></a>
+  <footer id="contact">
+    <div class="width">
+      <section>
+        <div class="social">
+          <h2>Let's talk.</h2>
+          <a href="mailto:&#104;&#97;&#110;&#110;&#97;&#104;&#115;&#116;&#101;&#105;&#110;&#100;&#101;&#115;&#105;&#103;&#110;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" title="email me">
+            <span class="fa-stack">
+              <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+              <i class="fa fa-envelope fa-stack-1x" aria-hidden="true"></i>
+            </span>
+            <span>hannahsteindesigns@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/hannahsteindesigns" title="connect on linkedin">
+            <span class="fa-stack">
+              <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+              <i class="fa fa-linkedin fa-stack-1x" aria-hidden="true"></i>
+            </span>
+            <span>linkedin.com/in/hannahsteindesigns</span>
+          </a>
+          <!-- <a href="https://www.behance.net/hannahsteindesigns" title="see more of my work on behance">
+            <img src="images/behance.svg" width="24" />
+            <span>behance.net/hannahsteindesigns</span>
+          </a> -->
+          <a href="https://github.com/hannahsteindesigns/" title="see my original files on github">
+            <span class="fa-stack">
+              <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+              <i class="fa fa-github fa-stack-1x" aria-hidden="true"></i>
+            </span>
+            <span>github.com/hannahsteindesigns</span>
+          </a>
+          <a href="https://issuu.com/hannahsteindesigns" title="see more of my print work on issuu">
+            <span class="fa-stack">
+              <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+              <i class="fa fa-briefcase fa-stack-1x" aria-hidden="true"></i>
+            </span>
+            <span>issuu.com/hannahsteindesigns</span>
+          </a>
+        </div>
+        <div class="form">
+          <div id="form-messages"></div>
+          <form name="hscontact" id="form" method="post" action="contact.php" novalidate>
+            <div class="name-input">
+              <input required type="text" name="name" id="name">
+              <label for="name" placeholder="Name"></label>
+            </div>
+            <div class="email-input">
+              <input required type="email" name="email" id="email">
+              <label for="email" placeholder="Email"></label>
+            </div>
+            <div class="message-input">
+              <textarea required name="message" id="message"></textarea>
+              <label for="message" placeholder="Send me a message"></label>
+            </div>
+            <button type="submit" id="submitbtn" class="full">Send</button>
+          </form>
+        </div>
+      </section>
     </div>
   </footer>
-  <script>
-    $(document).ready(function(){
-      $('.mobile-nav').on('click', function(){
-        $(this).toggleClass('active');
-        $('.nav').toggleClass('open');
-      });
-
-      $('.icon-border').hover(
-        function(){
-          var text = $(this).attr('data-description');
-          $(this).siblings('.description').html(text);
-        }, function(){
-          $(this).siblings('.description').html('')
-        }
-      );
-
-     
-      // $('.icon-border').on( 'click touchstart', function(){
-      //   $(this).toggleClass('active');
-      //   $(this).siblings('.icon-border').removeClass('active');
-        
-      //   var text = $(this).attr('data-description');
-      //       description = $(this).siblings('.description');
-        
-      //   description.html() == '' ? description.html(text) : description.html('');
-      // });
-    });
-  </script>
+  <script src="js/scripts.min.js"></script>
 </body>
-
 </html>

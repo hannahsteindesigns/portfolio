@@ -1,0 +1,163 @@
+/* ===== footer ===== */
+footer {
+  background-color: $red;
+  color: #FFF;
+  margin-top: 3em;
+  > div {
+    box-sizing: border-box;
+    padding: 2em 2em 5em;
+  }
+  section {
+    @include flexbox();
+    padding-top: 2em;
+    > div.form {
+      background-color: $light-grey;
+      box-shadow: 0 2px 4px rgba($dark-grey, .5);
+      margin-top: 2em;
+      max-width: 100%;
+      outline: 1px dotted $red;
+      outline-offset: -6px;
+      padding: 2em;
+      width: 100%;
+      @include responsiveMin(50em) {
+        flex: 0 1 50%;
+        margin-top: 0;
+      }
+    }
+    > div.social {
+      border-bottom: 1px dotted #FFF;
+      margin-bottom: 1em;
+      padding-bottom: 1em;
+      h2 {
+        margin-top: 0;
+        margin-bottom: 1.5em;
+      }
+    }
+  }
+  a {
+    @include flexbox($justify-content: flex-start, $align-items: center);
+    color: #FFF;
+    margin: .75em 0;
+    &:hover, &:active, &:focus {
+      border-color: transparent;
+    }
+    .fa-stack {
+      margin-right: .5em;
+      &-1x {
+        color: $red;
+      }
+    }
+  }
+  form {
+    > div {
+      margin-bottom: 1em;
+      position: relative;
+    }
+    input, textarea {
+      background-color: transparent;
+      border: none;
+      border-bottom: 4px double $teal;
+      box-shadow: none;
+      box-sizing: border-box;
+      display: block;
+      height: 3em;
+      font-family: $sans;
+      font-size: .85em;
+      margin-bottom: 2em;
+      max-width: 100%;
+      outline: none;
+      resize: vertical;
+      width: 100%;
+      &.error {
+        margin-bottom: 0;
+      }
+      + label[placeholder] {
+        display: block;
+        line-height: 1em;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        &::before {
+          color: $dark-grey;
+          content: attr(placeholder);
+          display: inline-block;
+          padding: .5em;
+          position: absolute;
+          top: 0;
+          transition: .3s ease-in-out;
+          white-space: nowrap;
+        }
+      }
+      &:focus + label[placeholder]::before,
+      &.focus + label[placeholder]::before {
+        color: $teal;
+        padding-left: 0;
+        top: -1.3em;
+        transition-duration: .2s;
+      }
+      &.error + label[placeholder]::after,
+      &.valid + label[placeholder]::after {
+        background: transparent;
+        content:"";
+        height: 1.45em;
+        margin: .25em;
+        position: absolute;
+        right: 0;
+        transition: background .5s;
+        width: 1.45em;
+      }
+      &.valid + label[placeholder]::after {
+        background: url("../images/valid.svg") no-repeat center center;
+      }
+      &.error + label[placeholder]::after {
+        background: url("../images/invalid.svg") no-repeat center center;
+      }
+    }
+    textarea {
+      height: 9em;
+      min-height: 3em;
+      padding-top: 1em;
+    }
+    div.error {
+      color: $red;
+      font-size: .9em;
+      margin: .5em 0;
+      text-align: right;
+    }
+    button, .button {
+      font-weight: bold;
+      letter-spacing: normal;
+      text-transform: uppercase;
+    }
+  }
+}
+#form-messages {
+  border: 1px dotted $red;
+  border-radius: 2px;
+  color: $red;
+  display: none;
+  margin-bottom: 2em;
+  padding: 1em;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  @include prefix((
+    box-shadow: 0 0 0px 1000px $light-grey inset !important
+  ), webkit);
+}
+#scrollTop {
+  background-color: $teal;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba($dark-grey, .5);
+  bottom: .5em;
+  color: #FFF;
+  cursor: pointer;
+  display: none;
+  font-size: 1.5em;
+  line-height: .75em;
+  padding: .75em;
+  position: fixed;
+  right: 1em;
+}

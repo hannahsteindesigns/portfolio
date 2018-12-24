@@ -1,0 +1,44 @@
+/* ===== animation ===== */
+.progressive {
+  overflow: hidden;
+  position: relative;
+  img {
+    &.lowres:not(.noblur) {
+      @include prefix((filter: blur(5px)), webkit);
+    }
+    &.overlay {
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      transition: opacity .4s ease-in;
+    }
+  }
+}
+.animate {
+  &.fade {
+    article {
+      opacity: 0;
+      transition: all .7s ease-out;
+      &.in-view {
+        opacity: 1;
+      }
+      &.slide {
+        -ms-transform: translate(0px, 200px);
+        @include prefix((
+          transform: translate3d(0px, 200px, 0px),
+          backface-visibility: hidden
+        ), webkit);
+        &.in-view {
+          -ms-transform: translate(0px, 0px, 0px);
+          @include prefix((transform: translate3d(0px, 0px, 0px),), webkit);
+        }
+      }
+    }
+  }
+}
+#content {
+  opacity: 0;
+  transition: opacity .7s ease-in;
+  transition-delay: .3s;
+}

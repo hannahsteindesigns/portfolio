@@ -1,0 +1,81 @@
+/* ===== case study ===== */
+%img {
+  height: auto;
+  max-width: 1000px;
+  width: 100%;
+}
+.case {
+  margin-bottom: 7em;
+  img {
+    @extend %img;
+    &.contain {
+      width: auto;
+    }
+  }
+  video {
+    @extend %img;
+  }
+  .overview {
+    margin: 0 auto 5em;
+  }
+  .banner {
+    margin: 0 auto;
+    video {
+      @extend %img;
+      margin-bottom: 2em;
+    }
+  }
+  article {
+    margin-top: 5em;
+    h3 {
+      width: 100%;
+    }
+    p {
+      font-size: 1.15em;
+      line-height: 1.75em;
+    }
+    &#challenge {
+      @include flexbox();
+      section {
+        justify-content: center;
+        margin-bottom: 2em;
+        width: 100%;
+        img {
+          height: auto;
+          max-width: 400px;
+        }
+      }
+    }
+    &#process {
+      section > div img {
+        margin-bottom: 2em;
+        max-width: 100%;
+      }
+    }
+    &#results {
+      section div {
+        border-bottom: 1px dotted $dark-grey;
+      }
+    }
+    &#solution {
+      @include responsiveMin(60em) {
+        #admin.contain {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .pager {
+    @include flexbox();
+  }
+}
+
+.lightbox .lbSlide {
+  color: $dark-grey;
+  border-bottom: none;
+  cursor: pointer;
+  &:hover, &:focus, &:active {
+    border-bottom: none;
+    opacity: .5;
+  }
+}
