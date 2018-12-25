@@ -163,7 +163,7 @@ $(document).ready(function(){
     var doc = document.documentElement,
         f = doc.style.flex,
         fw = doc.style.webkitFlex,
-        updateLink = "http://dev.hannahsteindesigns.com/update";
+        updateLink = "http://hannahsteindesigns.com/update";
         ( f === "" || fw === "" ) ? doc.className = "flex" : doc.className = "no-flex";
         if ( f === "" || fw === "" ) {
           doc.className = "flex";
