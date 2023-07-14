@@ -5,8 +5,9 @@
 				$name = str_replace(array("\r","\n"),array(" "," "),$name);
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
         $message = trim($_POST["message"]);
+        $hp = $_POST["website"];
 
-        if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if ( !empty($hp) OR empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             http_response_code(400);
             echo "Oops! There was a problem with your submission. Please complete the form and try again.";
             exit;
