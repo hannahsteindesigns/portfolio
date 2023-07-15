@@ -1,17 +1,18 @@
 /* ===== header ===== */
 header {
-  border-bottom: 7px double $red;
   margin: 3.75em 0;
   > div {
-    @include flexbox($align-items: flex-end);
+    @include flexbox($align-items: flex-start);
     padding-bottom: 1em;
     position: relative;
     h1 {
+      //font-size: 1.15em;
       margin: 0;
     }
     nav {
       display: none;
       margin-top: .5em;
+      text-align: right;
       width: 100%;
       a {
         display: block;
@@ -20,7 +21,7 @@ header {
         padding: .5em 0;
         text-transform: uppercase;
         &.active {
-          color: $red;
+          color: $teal_medium;
         }
       }
     }
@@ -31,7 +32,7 @@ header {
       height: 3.5em;
       position: relative;
       width: 3.5em;
-      @include responsiveMin(42em) {
+      @include responsiveMin(700px) {
         display: none;
       }
       &:hover, &:focus {
@@ -46,7 +47,7 @@ header {
         left: .6em;
         position: absolute;
         right: .6em;
-        top: 2em;
+        top: 1em;
         transition: background 0s .3s;
         &::before, &::after {
           @extend span;
@@ -83,7 +84,7 @@ header {
         }
       }
     }
-    @include responsiveMin(42em) {
+    @include responsiveMin(700px) {
       align-items: baseline;
       nav {
           display: block !important;
@@ -93,7 +94,8 @@ header {
             display: inline-block;
             margin: 0;
             padding: 0;
-            &:nth-of-type(2) {
+            &:not(:first-child),
+            &:not(:last-child) {
               margin: 0 1.5em;
             }
           }
