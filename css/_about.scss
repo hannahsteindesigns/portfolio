@@ -8,15 +8,27 @@
   .bio {
     @include flexbox();
     min-height: 30em;
+    h4 {
+      font-family: $sans;
+    }
     p {
       font-size: 1.2em;
       line-height: 1.5em;
       margin-bottom: 1em;
+      &.image {
+        text-align: center;
+      }
+    }
+    a {
+      font-weight: 300;
+      i {
+        margin-right: 5px;
+      }
     }
     > div {
       order: 2;
       @include responsiveMin(42em) {
-        flex: 0 1 55%;
+        flex: 0 1 65%;
         order: 0;
       }
     }

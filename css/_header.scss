@@ -7,7 +7,11 @@ header {
     position: relative;
     h1 {
       //font-size: 1.15em;
+      line-height: .8em;
       margin: 0;
+      a {
+        color: $green;
+      }
     }
     nav {
       display: none;
@@ -21,7 +25,7 @@ header {
         padding: .5em 0;
         text-transform: uppercase;
         &.active {
-          color: $teal_medium;
+          color: $green;
         }
       }
     }
@@ -40,7 +44,7 @@ header {
         outline: none;
       }
       span {
-        background-color: lighten($teal, 15%);
+        background-color: $green_medium;
         content: "";
         display: block;
         height: .3em;

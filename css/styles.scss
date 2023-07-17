@@ -7,12 +7,23 @@
 $red: #F02E11;
 $dark-grey: #666;
 $light-grey: #F9F9F9;
+$grey_medium: #999;
 $teal: #037569;
+$teal_medium: #80CCC0;
+$green: #07A254;
+$green_medium: #6DD28A;
+
+.green {
+  color: $green;
+}
 .teal {
   color: $teal;
 }
 .red {
   color: $red;
+}
+.grey_medium {
+  color: $grey_medium;
 }
 
 // fonts
@@ -21,20 +32,21 @@ $sans: "Roboto", Helvetica, Arial, sans-serif;
 
 // base
 html {
-  background-color: $light-grey;
+  //background-color: $light-grey;
 }
 body {
   box-sizing: border-box;
   color: $dark-grey;
   font: normal 14px $sans;
   margin: 0;
+  padding: 0 2em 6em 2em;
 }
 ::selection {
-  background-color: lighten($teal, 15%);
+  background-color: lighten($green, 5%);
   color: #fff;
 }
 ::-moz-selection {
-  background-color: lighten($teal, 15%);
+  background-color: lighten($green, 5%);
   color: #fff;
 }
 .width {
@@ -67,6 +79,8 @@ h3 {
 h4 {
   @extend %heading;
   font-size: 1.25em;
+  line-height: 1.75em;
+  margin-bottom: 50px;
 }
 h5 {
   @extend %heading;
@@ -96,7 +110,7 @@ p {
 // links
 a {
   border-bottom: 1px dotted transparent;
-  color: $red;
+  color: $green;
   opacity: 1;
   text-decoration: none;
   transition: border .3s, opacity .3s;
@@ -114,7 +128,7 @@ a {
 // buttons
 button,
 .button {
-  background-color: $teal;
+  background-color: $green;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba($dark-grey, .5);
   color: #FFF;
@@ -123,7 +137,7 @@ button,
   padding: 1em 1.25em;
   transition: all .5s;
   &:hover, &:focus, &:active {
-    background-color: lighten($teal, 5%);
+    background-color: lighten($green, 1%);
     color: #FFF;
     transition: all .5s;
   }
@@ -134,7 +148,7 @@ button,
 
 // helpers
 .stress {
-  color: $teal;
+  color: $green;
   font-weight: bold;
 }
 .note {
@@ -184,6 +198,9 @@ button,
     display: block;
   }
 }
+.shadow {
+  box-shadow: 0 2px 4px rgba($dark-grey, .5);
+}
 
 // no flexbox
 .update {
@@ -228,6 +245,7 @@ aside.borders {
 // page styles
 @import "grid";
 @import "header";
+@import "hero";
 @import "portfolio";
 @import "cases";
 @import "about";

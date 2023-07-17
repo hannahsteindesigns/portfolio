@@ -15,8 +15,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1, maximum-scale=2, user-scalable=yes, minimum-scale=1">
   <!-- styles & images -->
   <script src="https://use.fontawesome.com/1d1e476666.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700" rel="stylesheet">
-  <link href="css/styles.min.css" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+  
+  <link href="css/styles.css" rel="stylesheet">
+  
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <!-- scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -31,37 +36,32 @@
       <h1><a href="/">H</a></h1>
         <a class="mobile-nav" title="toggle menu"><span></span></a>
         <nav>
-          <a href="#" title="portfolio">work</a>
+          <a href="/" title="portfolio">work</a>
           <a href="about.html" title="about" class="active">about</a>
-          <a href="images/Stein_resume.pdf" target="_blank" title="Download Hannah's resume">resume</a>
+          <!-- <a href="images/Stein_resume.pdf" target="_blank" title="Download Hannah's resume">resume</a> -->
           <a href="mailto:hannahsteindesigns@gmail.com?subject=Hello%20from%20hannahsteindesigns.com" title="contact">contact</a>
         </nav>
     </div>
   </header>
   <!-- content -->
   <section id="content" class="width about">
-    <h3 class="text-center stress">I design user interfaces and develop the front-end code to make those designs a reality.</h3>
     <article class="bio">
+      <!-- <p class="image"><img src="images/hannah.jpg" title="It's me, Hannah!" /></p> -->
       <div>
-          <p>I take projects from initial sketches through static wireframes and basic prototypes all the way to the live finished product. I'm increasingly passionate about user experience design as a guiding principle for everything I create.</p>
-          <p>I believe that technology should be above all make life easier. I consider myself an advocate for the user and love the challenge of marrying the best interests of user and business to create a solution that benefits everyone.</p>
+          <h4>I take projects from initial sketches through static wireframes and basic prototypes all the way to the live finished product. I'm passionate about user experience design as a guiding principle for everything I create.</h4>
+          <p><a href="images/Stein_resume.pdf" target="_blank" title="Download Hannah's resume"><i class="fa fa-download"></i>Download resume</a></p>
+          <p>I believe that technology should above all make life easier. I am an advocate for the user and love the challenge of marrying the best interests of user and business to create a solution that benefits everyone. </p>
           <p>My early roots are in print design, and I still sometimes rely on those fundamental design principles and knowledge of how people interact with information on a base level. I'm fascinated with how those principles scale &mdash; or don't &mdash; to web and mobile interactions as well as the unique problems new technologies face.</p>
-          <p>In my current position at Hospicelink - StateServ in Birmingham, Alabama, I create and update interfaces for a client-facing web app. Our software allows hospices to order medical equipment and manage patients, and the equipment provider to manage delivery and pickup orders.</p>
-          <p>My responsibilities include researching and gathering feedback from both internal and external users of our software, identifying inefficiencies, designing intuitive interfaces, and implementing the front-end code to make those designs a reality.</p>
+          <p id="stateserv">In my current position at StateServ, I create and update interfaces for a SaaS web app. Our software allows hospices to order medical equipment and manage patients, and the equipment provider to manage delivery and pickup orders. Here, an intuitive UI not only can provide a pleasant experience, but a frustrating one can negatively affect patient care if our clinical users can’t perform tasks as expected. In addition to the web portal, in 2023 we began design on a native iOS app for one subset of users.</p>
+          <p>My responsibilities include researching and gathering feedback from both internal and external users of our software; attending requirements-gathering meetings with the business to ensure the needs of users are considered; identifying inefficiencies in both designs and front-end code; designing intuitive interfaces while maintaining brand and experience consistency; and implementing front-end code to make those interfaces a reality.</p>
       </div>
-      <aside>
-        <p><img src="images/hannah.jpg" title="It's me, Hannah!" /></p>
-        <p><a href="images/Stein-resume.pdf" alt="Hannah's resume" target="_blank">View or download my PDF resume.</a></p>
-        <h4 class="stress">skillset</h4>
-        <h6 style="margin-bottom: .25em">research</h6>
-        <span>remote user testing, user experience interviews, survey design</span>
-        <h6 style="margin-bottom: .25em; margin-top: 1.25em">design</h6>
-        <span>wireframing and prototyping using Sketch, InVision, Adobe XD, Photoshop, Illustrator</span>
-        <h6 style="margin-bottom: .25em; margin-top: 1.25em">development</h6>
-        <span>HTML5, CSS3, SCSS, JavaScript (including jQuery), React</span>
-      </aside>
     </article>
+    <aside class="borders">
+
+    </aside>
   </section>
-  <script src="js/scripts.min.js"></script>
+
+  <script src="js/scripts.js"></script>
+
 </body>
 </html>

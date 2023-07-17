@@ -2,9 +2,11 @@
 .portfolio {
   > article {
     @include flexbox($justify-content: center);
+    background-color: darken($light-grey, 2%);
     box-sizing: border-box;
     margin: 7em 0;
     min-width: 300px;
+    padding: 20px;
     @include responsiveMin(60em) {
       justify-content: space-between;
       margin: 10em 0;
@@ -41,6 +43,9 @@
       flex: 0 1 100%;
       @include responsiveMin(60em) {
         flex: 0 1 30%;
+        &.full {
+          flex-basis: 100%;
+        }
       }
     }
     .button {

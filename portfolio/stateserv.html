@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52747973-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-52747973-1');
+  </script>
+  <title>hannah stein designs</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1, maximum-scale=2, user-scalable=yes, minimum-scale=1">
+  <!-- styles & images -->
+  <script src="https://use.fontawesome.com/1d1e476666.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+  
+  <link href="../css/styles.css" rel="stylesheet">
+
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <!-- scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <div class="width">
+      <h1><a href="/">H</a></h1>
+        <a class="mobile-nav" title="toggle menu"><span></span></a>
+        <nav>
+          <a href="/" title="portfolio">work</a>
+          <a href="../about.html" title="about">about</a>
+          <!-- <a href="../images/Stein_resume.pdf" target="_blank" title="Download Hannah's resume">resume</a> -->
+          <a href="mailto:hannahsteindesigns@gmail.com?subject=Hello%20from%20hannahsteindesigns.com" title="contact">contact</a>
+        </nav>
+    </div>
+  </header>
+  <!-- content -->
+  <section id="content" class="width case animate fade">
+    <article class="overview">
+      <h2>prescription upload &amp; review process</h2>
+      <h5 class="green">in-house designer &amp; developer at StateServ Medical</h5>
+    </article>
+    <article id="note" class="slide">
+      Due to confidentiality agreements, I'm unable to provide images of this project.
+    </article>
+    <article id="challenge" class="slide">
+      <h3 class="green text-center">challenge</h3>
+      <p>Durable medical equipment (DME) providers are required to have a prescription on file when delivering oxygen to a patient, however there was no standard process for hospices to transmit this data to providers. Some companies would send them via fax or email, some would upload a file to the patient's profile and the provider user would have to sift through all the documents to find it, and some provided paper prescriptions that would have to be kept in a filing cabinet somewhere. When it came time for a licensing review, the results of this scattershot process were inconsistent at best, leading to fines and potential suspension of a license to distribute medical oxygen.</p>
+      <p>One challenge we always run into is getting users to actually utilize new features of the app &mdash; especially when the targeted user is a nurse who is already overworked.</p>
+    </article>
+    <article id="process" class="slide">
+      <h3 class="green text-center">process</h3>
+      <section class="grid gutters">
+        <div class="cell">
+          <h6>research</h6>
+          <p>I was unable to speak with actual external users to gain insight, so instead I referred to my existing personas for both clinician and administrative hospice users. I also spoke with internal DME provider users who would be responsible for reviewing prescriptions and producing records during a state audit. After consulting with users and our legal team, we were able to determine what information was required and what is not legally required but helpful to users.</p>
+          <p>Before starting work on wireframes, I created a user flow in LucidChart to diagram all possible scenarios. This included processes done by the user (uploading and reviewing files) and behind-the-scenes automatic processes instigated by the app (generating email reminders for noncompliant patients).</p>
+        </div>
+        <div class="cell">
+          <h6>wireframe &amp; prototype</h6>
+          <p>This feature was needed ASAP, so we decided to leverage existing functionality that could be expanded upon to meet the project goals. This approach would also help ease users into adopting a new feature by building off something they're already familiar with.</p>
+          <p>Because I was starting with existing functionality, I only created a few wireframes before generating mid- to high-fidelity mockups. I've built a library of mockup components that I use for all my designs, so I wasn't starting from scratch.</p>
+          <p>I did, however, use this chance to update the UX of our file upload process, which definitely needed some love. The buttons, icons, and colors were not in line with the rest of the app. In order to reduce the cognitive load, I made sure to upate this module to follow our existing patterns. For example &mdash; our modal pattern is to have primary actions in a blue button on the right and cancel actions in a white button on the left. Destructive actions use a red button for emphasis and immediate recognition. I had to make updates to align the existing feature with these patterns.</p>
+          <p>It was obvious that the mobile experience was not considered when the file upload feature was originally implemented, so I made sure to consider that UI from the start. I ended up with more than 60 screens in the final prototype, which I presented to stakeholders from various parts of the business for review and approval.</p>
+        </div>
+      </section>
+    </article>
+    <article id="solution" class="slide">
+      <h3 class="green text-center">solution</h3>
+      <p>Working with back-end developers, I helped implement the changes to the file upload process that would allow tracking prescriptions. One of the main considerations was information and validation to help guide the user when entering data. We provided them with upload requirements relating to file type and size before an upload was ever attempted, instead of forcing them to fail in order to view what criteria they missed. We also provided guidelines for what should be included in a prescription file.</p>
+      <p>Clinician users are able to upload prescriptions via the file upload module the same way they always have but now there's a new option to designate a file as a prescription, and if so to enter an expiration date which is required by regulators.</p>
+      <p>Because an expiration date is required, some prescriptions can be automatically marked as noncompliant by the system and prompt for a solution before a manual review is ever done. DME provider users tasked with reviewing prescriptions can now perform that review within the app, selecting from a list of prefilled reasons for rejection or supplying their own. When a prescription is rejected, the app sends an email to the hospice user prompting them to upload a new file. This reduces a lot of manual back-and-forth via email that we can't track within the system.</p>
+      <p>Users from both lines of business can also view prescription data within a report in the app. There they can search for patients by location, file status, and compliance. They can also view who placed the noncompliant order to identify consistent points of failure.</p>
+    </article>
+    <article id="next_steps" class="slide">
+      <h3 class="green text-center">next steps</h3>
+      <p>The end goal is to fully integrate this process into the web app, so no external files are needed. Again, we plan to leverage existing functionality by prompting users to fill out a new in-app form in the same UI where we currently prompt to upload a file.</p>
+      <p>In addition to ensuring more consistent data across users and hospice branches, this will move us a step closer to being able to integrate with existing electronic medical records when available and remove the need for manual entry entirely.</p>
+      <p>I have created an additional 30 or so screens in the prototype to demonstrate this behavior.</p>
+    </article>
+    <article class="pager">
+      <a class="prev" href="transcend.html" title="Transcend Counseling case study"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> previous case study</a>
+    </article>
+  </section>
+  <div id="scrollTop"><i class="fa fa-arrow-up" aria-label="back to top"></i></div>
+
+  <script src="../js/scripts.js"></script>
+
+</body>
+</html>

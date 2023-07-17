@@ -2,12 +2,6 @@ $(document).ready(function(){
   // fade in pretty
   $("#content").css("opacity", "1");
 
-
-  // slide up
-
-
-
-
   // mobile nav
   $(".mobile-nav").click(function(){
     $(this).toggleClass("active");
@@ -99,10 +93,8 @@ $(document).ready(function(){
     const fw = doc.style.webkitFlex;
     const updateLink = "http://hannahsteindesigns.com/update";
 
-        // TO DO: can this be !f.length ?
-        ( f === "" || fw === "" ) ? doc.className = "flex" : doc.className = "no-flex";
-        if ( f === "" || fw === "" ) {
-          doc.className = "flex";
+        ( !f.length || !fw.length ) ? doc.className = "flex" : doc.className = "no-flex";
+        if ( !f.length || !fw.length ) {
         } else if (window.location.href != updateLink) {
           window.location.replace(updateLink);
         } else {
