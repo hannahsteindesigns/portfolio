@@ -39,7 +39,7 @@ body {
   color: $dark-grey;
   font: normal 14px $sans;
   margin: 0;
-  padding: 0 2em 6em 2em;
+  padding: 0 2em 4em 2em;
 }
 ::selection {
   background-color: lighten($green, 5%);
@@ -169,10 +169,15 @@ button,
 .text-center {
   text-align: center;
 }
-.l-show {
+.m-show {
   display: none;
-  @include responsiveMin(60em) {
+  @include responsiveMin(42em) {
     display: inline-block;
+  }
+}
+.m-hide {
+  @include responsiveMin(42em) {
+    display: none !important;
   }
 }
 .margin {

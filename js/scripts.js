@@ -8,6 +8,18 @@ $(document).ready(function(){
     $("nav").slideToggle()
   });
 
+  // sticky header
+  window.onscroll = function() {
+    const header = document.getElementsByTagName("header")[0];
+    let stickyHeight = header.offsetTop + 50;
+
+    if (window.pageYOffset > stickyHeight) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  };
+
   /* scroll to top */
   let scrolling = false;
   const showArrow = function(){
@@ -19,7 +31,7 @@ $(document).ready(function(){
       scrolling = false;
       showArrow();
     }
-  }, 250);
+  }, 100);
   showArrow();
   $("#scrollTop").click(function(){
     $("html,body").animate({

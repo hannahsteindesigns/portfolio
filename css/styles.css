@@ -70,7 +70,7 @@ body {
   color: #666;
   font: normal 14px "Roboto", Helvetica, Arial, sans-serif;
   margin: 0;
-  padding: 0 2em 6em 2em;
+  padding: 0 2em 4em 2em;
 }
 
 ::selection {
@@ -212,12 +212,18 @@ button.full,
   text-align: center;
 }
 
-.l-show {
+.m-show {
   display: none;
 }
-@media (min-width: 60em) {
-  .l-show {
+@media (min-width: 42em) {
+  .m-show {
     display: inline-block;
+  }
+}
+
+@media (min-width: 42em) {
+  .m-hide {
+    display: none !important;
   }
 }
 
@@ -367,6 +373,33 @@ aside.borders a:hover, aside.borders a:focus, aside.borders a:active {
 header {
   margin: 3.75em 0;
 }
+header.sticky {
+  background-color: #FFFFFF;
+  border-bottom: 2px solid #07A254;
+  box-shadow: 0 2px 4px rgba(102, 102, 102, 0.25);
+  left: 0;
+  margin-top: 0;
+  padding-top: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  transition: box-shadow 0.1s ease-in;
+}
+header.sticky .width {
+  padding-bottom: 0;
+}
+@media (min-width: 700px) {
+  header.sticky .width {
+    padding-bottom: 1em;
+  }
+}
+header.sticky .width h1 {
+  margin-left: 1em;
+}
+header.sticky .width .mobile-nav {
+  margin-right: 2em;
+}
 header > div {
   align-items: flex-start;
   display: -webkit-flex;
@@ -418,7 +451,7 @@ header > div .mobile-nav:hover, header > div .mobile-nav:focus {
   outline: none;
 }
 header > div .mobile-nav span, header > div .mobile-nav span::before, header > div .mobile-nav span::after {
-  background-color: #6DD28A;
+  background-color: #07A254;
   content: "";
   display: block;
   height: 0.3em;
@@ -516,6 +549,7 @@ header > div .mobile-nav.active span::after {
 }
 #hero #intro {
   margin-top: 100px;
+  position: relative;
 }
 #hero #intro .box {
   height: 150px;
@@ -527,7 +561,7 @@ header > div .mobile-nav.active span::after {
   line-height: 1.5em;
   margin: 0;
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
   left: 6%;
   transition: font-size 0.5s;
 }
@@ -627,7 +661,7 @@ header > div .mobile-nav.active span::after {
   max-width: 600px;
 }
 .case .overview {
-  margin: 0 auto 5em;
+  margin: 5em auto 0;
 }
 .case .banner {
   margin: 0 auto;
@@ -636,7 +670,10 @@ header > div .mobile-nav.active span::after {
   margin-bottom: 2em;
 }
 .case article {
-  margin-top: 5em;
+  margin-top: 3em;
+}
+.case article h2 {
+  margin-bottom: 0.5em;
 }
 .case article h3 {
   width: 100%;
@@ -647,6 +684,22 @@ header > div .mobile-nav.active span::after {
 .case article p {
   font-size: 1.15em;
   line-height: 1.75em;
+}
+.case article .title {
+  position: relative;
+}
+.case article .title h3 {
+  display: inline-block;
+  margin-left: 1em;
+}
+.case article .title .highlight {
+  width: 80px;
+  height: 40px;
+  background-color: rgba(109, 210, 138, 0.35);
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  z-index: -1;
 }
 .case article#challenge {
   align-items: flex-start;
@@ -681,7 +734,6 @@ header > div .mobile-nav.active span::after {
   font-style: italic;
   line-height: 1.5em;
   margin-top: 4em;
-  text-align: center;
 }
 .case .pager {
   align-items: flex-start;
@@ -739,7 +791,7 @@ header > div .mobile-nav.active span::after {
 }
 @media (min-width: 42em) {
   .about .bio > div {
-    flex: 0 1 65%;
+    flex: 0 1 60%;
     order: 0;
   }
 }
@@ -754,16 +806,36 @@ header > div .mobile-nav.active span::after {
   }
 }
 .about .bio aside img {
-  border-radius: 50%;
-  height: 200px;
+  height: auto;
   width: 200px;
+}
+.about .bio aside div {
+  position: relative;
+}
+.about .bio aside div .highlight {
+  width: 200px;
+  height: 250px;
+  background-color: #6DD28A;
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  z-index: -1;
+}
+@media (min-width: 42em) {
+  .about .bio aside div .highlight {
+    left: 25px;
+  }
+}
+@media (min-width: 60em) {
+  .about .bio aside div .highlight {
+    left: 60px;
+  }
 }
 
 /* ===== footer ===== */
 footer {
-  background-color: #F02E11;
-  color: #FFF;
-  margin-top: 3em;
+  margin: 3em auto 0 auto;
+  max-width: 200px;
 }
 footer > div {
   box-sizing: border-box;
@@ -810,7 +882,7 @@ footer a {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  color: #FFF;
+  color: #666;
   margin: 0.75em 0;
 }
 footer a:hover, footer a:active, footer a:focus {

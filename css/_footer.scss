@@ -1,8 +1,7 @@
 /* ===== footer ===== */
 footer {
-  background-color: $red;
-  color: #FFF;
-  margin-top: 3em;
+  margin: 3em auto 0 auto;
+  max-width: 200px;
   > div {
     box-sizing: border-box;
     padding: 2em 2em 5em;
@@ -36,7 +35,7 @@ footer {
   }
   a {
     @include flexbox($justify-content: flex-start, $align-items: center);
-    color: #FFF;
+    color: $dark-grey;
     margin: .75em 0;
     &:hover, &:active, &:focus {
       border-color: transparent;

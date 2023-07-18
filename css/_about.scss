@@ -11,6 +11,7 @@
     h4 {
       font-family: $sans;
     }
+
     p {
       font-size: 1.2em;
       line-height: 1.5em;
@@ -28,7 +29,7 @@
     > div {
       order: 2;
       @include responsiveMin(42em) {
-        flex: 0 1 65%;
+        flex: 0 1 60%;
         order: 0;
       }
     }
@@ -40,9 +41,26 @@
         margin: 0;
       }
       img {
-        border-radius: 50%;
-        height: 200px;
+        height: auto;
         width: 200px;
+      }
+      div {
+        position: relative;
+        .highlight {
+          width: 200px;
+          height: 250px;
+          background-color: $green_medium;
+          position: absolute;
+          bottom: 0;
+          left: -10px;
+          z-index: -1;
+          @include responsiveMin(42em) {
+            left: 25px;
+          }
+          @include responsiveMin(60em) {
+            left: 60px;
+          }
+        }
       }
     }
   }

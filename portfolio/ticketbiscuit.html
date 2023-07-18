@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52747973-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -10,6 +10,7 @@
 
     gtag('config', 'UA-52747973-1');
   </script>
+
   <title>hannah stein designs</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1, maximum-scale=2, user-scalable=yes, minimum-scale=1">
@@ -19,8 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
-  <link href="../css/styles.css" rel="stylesheet">
-
+  <link href="../css/styles.min.css" rel="stylesheet">
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
   <!-- scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -52,7 +52,10 @@
       </div>
     </article>
     <article id="challenge" class="slide">
-      <h3 class="green text-center">challenge</h3>
+      <div class="title">
+        <h3 class="">challenge</h3>
+        <span class="highlight"></span>
+      </div>
       <p>The ticket-buying interface remained largely unchanged since the TicketBiscuit platform was developed in the early 2000s. Users had to click through anywhere from four to six pages before completing their transaction. The UI was initially created by back-end developers and was largely table-based. I was tasked with simplifying this process and modernizing it in both form and function without losing any functionality or disorienting returning users.</p>
       <section class="grid gutters text-center">
         <div class="cell m-auto"><img src="../images/case-study/ticketbiscuit/legacy-1.png" width="346px" height="400px"/></div>
@@ -61,7 +64,10 @@
       </section>
     </article>
     <article id="process" class="slide">
-      <h3 class="green text-center">process</h3>
+      <div class="title">
+        <h3 class="">process</h3>
+        <span class="highlight"></span>
+      </div>
       <section class="grid gutters">
         <div class="cell l-third">
           <h6>research</h6>
@@ -95,7 +101,10 @@
      </section>
     </article>
     <article id="solution" class="slide">
-      <h3 class="green text-center">solution</h3>
+      <div class="title">
+        <h3 class="">solution</h3>
+        <span class="highlight"></span>
+      </div>
       <div class="banner">
         <video poster="../images/case-study/ticketbiscuit/purchase-process.png" muted autoplay controls loop>
           <source src="../images/case-study/ticketbiscuit/purchase-process.mp4">
@@ -106,7 +115,10 @@
       <p>Back-end developers implemented my new total cost design that updates automatically based on decisions made in the checkout cards. I also made the ticket purchase timer more conspicuous so it didn't get lost on the page and created a new, separate cart page that can be accessed outside the purchase process. Since the screen can become very long on mobile, I made the pay button float near the bottom of the screen so it's always within reach. Lastly, I used some jQuery and CSS3 transitions to animate interactions for a smoother user experience.</p>
     </article>
     <article id="results" class="slide">
-      <h3 class="green text-center">results</h3>
+      <div class="title">
+        <h3 class="">results</h3>
+        <span class="highlight"></span>
+      </div>
       <section class="grid gutters text-center stretch">
         <div class="cell m-third">
           <h1 class="grey_medium">30.79%</h1>
@@ -127,9 +139,15 @@
       <a class="next" href="amy.html" title="Amy Burke Counseling case study">next case study <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
     </article>
   </section>
+  <!-- footer -->
+  <footer class="grid l-hide">
+    <!-- <a href="/" title="portfolio">work</a>
+    <a href="about.html" title="about" class="active">about</a> -->
+    <a href="mailto:hannahsteindesigns@gmail.com?subject=Hello%20from%20hannahsteindesigns.com" title="contact">hannahsteindesigns@gmail.com</a>
+  </footer>
   <div id="scrollTop"><i class="fa fa-arrow-up" aria-label="back to top"></i></div>
 
-  <script src="../js/scripts.js"></script>
+  <script src="../js/scripts.min.js"></script>
 
 </body>
 </html>

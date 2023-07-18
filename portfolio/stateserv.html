@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52747973-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -10,6 +10,7 @@
 
     gtag('config', 'UA-52747973-1');
   </script>
+
   <title>hannah stein designs</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1, maximum-scale=2, user-scalable=yes, minimum-scale=1">
@@ -19,8 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
-  
-  <link href="../css/styles.css" rel="stylesheet">
+  <link href="../css/styles.min.css" rel="stylesheet">
 
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
   <!-- scripts -->
@@ -50,15 +50,21 @@
       <h5 class="green">in-house designer &amp; developer at StateServ Medical</h5>
     </article>
     <article id="note" class="slide">
-      Due to confidentiality agreements, I'm unable to provide images of this project.
+      Due to a confidentiality agreement, I'm unable to provide images of this project.
     </article>
     <article id="challenge" class="slide">
-      <h3 class="green text-center">challenge</h3>
+      <div class="title">
+        <h3 class="">challenge</h3>
+        <span class="highlight"></span>
+      </div>
       <p>Durable medical equipment (DME) providers are required to have a prescription on file when delivering oxygen to a patient, however there was no standard process for hospices to transmit this data to providers. Some companies would send them via fax or email, some would upload a file to the patient's profile and the provider user would have to sift through all the documents to find it, and some provided paper prescriptions that would have to be kept in a filing cabinet somewhere. When it came time for a licensing review, the results of this scattershot process were inconsistent at best, leading to fines and potential suspension of a license to distribute medical oxygen.</p>
       <p>One challenge we always run into is getting users to actually utilize new features of the app &mdash; especially when the targeted user is a nurse who is already overworked.</p>
     </article>
     <article id="process" class="slide">
-      <h3 class="green text-center">process</h3>
+      <div class="title">
+        <h3 class="">process</h3>
+        <span class="highlight"></span>
+      </div>
       <section class="grid gutters">
         <div class="cell">
           <h6>research</h6>
@@ -75,14 +81,20 @@
       </section>
     </article>
     <article id="solution" class="slide">
-      <h3 class="green text-center">solution</h3>
+      <div class="title">
+        <h3 class="">solution</h3>
+        <span class="highlight"></span>
+      </div>
       <p>Working with back-end developers, I helped implement the changes to the file upload process that would allow tracking prescriptions. One of the main considerations was information and validation to help guide the user when entering data. We provided them with upload requirements relating to file type and size before an upload was ever attempted, instead of forcing them to fail in order to view what criteria they missed. We also provided guidelines for what should be included in a prescription file.</p>
       <p>Clinician users are able to upload prescriptions via the file upload module the same way they always have but now there's a new option to designate a file as a prescription, and if so to enter an expiration date which is required by regulators.</p>
       <p>Because an expiration date is required, some prescriptions can be automatically marked as noncompliant by the system and prompt for a solution before a manual review is ever done. DME provider users tasked with reviewing prescriptions can now perform that review within the app, selecting from a list of prefilled reasons for rejection or supplying their own. When a prescription is rejected, the app sends an email to the hospice user prompting them to upload a new file. This reduces a lot of manual back-and-forth via email that we can't track within the system.</p>
       <p>Users from both lines of business can also view prescription data within a report in the app. There they can search for patients by location, file status, and compliance. They can also view who placed the noncompliant order to identify consistent points of failure.</p>
     </article>
     <article id="next_steps" class="slide">
-      <h3 class="green text-center">next steps</h3>
+      <div class="title">
+        <h3 class="">next steps</h3>
+        <span class="highlight"></span>
+      </div>
       <p>The end goal is to fully integrate this process into the web app, so no external files are needed. Again, we plan to leverage existing functionality by prompting users to fill out a new in-app form in the same UI where we currently prompt to upload a file.</p>
       <p>In addition to ensuring more consistent data across users and hospice branches, this will move us a step closer to being able to integrate with existing electronic medical records when available and remove the need for manual entry entirely.</p>
       <p>I have created an additional 30 or so screens in the prototype to demonstrate this behavior.</p>
@@ -91,9 +103,15 @@
       <a class="prev" href="transcend.html" title="Transcend Counseling case study"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> previous case study</a>
     </article>
   </section>
+  <!-- footer -->
+  <footer class="grid l-hide">
+    <!-- <a href="/" title="portfolio">work</a>
+    <a href="about.html" title="about" class="active">about</a> -->
+    <a href="mailto:hannahsteindesigns@gmail.com?subject=Hello%20from%20hannahsteindesigns.com" title="contact">hannahsteindesigns@gmail.com</a>
+  </footer>
   <div id="scrollTop"><i class="fa fa-arrow-up" aria-label="back to top"></i></div>
 
-  <script src="../js/scripts.js"></script>
+  <script src="../js/scripts.min.js"></script>
 
 </body>
 </html>
