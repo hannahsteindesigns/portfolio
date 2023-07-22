@@ -1,0 +1,6 @@
+<Files stateserv-authenticated.html>
+AuthName "Show Images"
+AuthType Basic
+AuthUserFile "/home/hanste8/hannahsteindesigns.com/portfolio/.htpasswd"
+Require valid-user
+</Files>

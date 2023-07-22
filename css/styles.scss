@@ -129,10 +129,12 @@ a {
 button,
 .button {
   background-color: $green;
+  border: none;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba($dark-grey, .5);
   color: #FFF;
   cursor: pointer;
+  font-size: .9em;
   letter-spacing: .5px;
   padding: 1em 1.25em;
   transition: all .5s;
