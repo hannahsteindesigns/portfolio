@@ -163,10 +163,12 @@ header a {
 button,
 .button {
   background-color: #07A254;
+  border: none;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(102, 102, 102, 0.5);
   color: #FFF;
   cursor: pointer;
+  font-size: 0.9em;
   letter-spacing: 0.5px;
   padding: 1em 1.25em;
   transition: all 0.5s;
@@ -371,7 +373,12 @@ aside.borders a:hover, aside.borders a:focus, aside.borders a:active {
 
 /* ===== header ===== */
 header {
-  margin: 3.75em 0;
+  margin: 2em 0;
+}
+@media (min-width: 500px) {
+  header {
+    margin: 3em 0;
+  }
 }
 header.sticky {
   background-color: #FFFFFF;
@@ -513,11 +520,23 @@ header > div .mobile-nav.active span::after {
 /* ===== hero ===== */
 #hero #intro .box, #hero #name .box {
   background-color: #6DD28A;
+  height: 150px;
+  width: 80%;
+}
+@media (min-width: 500px) {
+  #hero #intro .box, #hero #name .box {
+    width: 325px;
+  }
 }
 
 #hero {
-  min-height: 60vh;
+  min-height: 40vh;
   position: relative;
+}
+@media (min-width: 400px) {
+  #hero {
+    min-height: 60vh;
+  }
 }
 #hero #name {
   align-items: flex-start;
@@ -528,16 +547,20 @@ header > div .mobile-nav.active span::after {
   justify-content: flex-end;
   text-align: right;
 }
-#hero #name .box {
-  height: 150px;
-  width: 325px;
-}
 #hero #name .text {
-  font-size: 5em;
+  font-size: 3.5em;
   line-height: 1em;
   margin: 0;
   position: absolute;
-  right: 17%;
+  right: 10%;
+  top: 8%;
+  transition: font-size 0.5s;
+}
+@media (min-width: 400px) {
+  #hero #name .text {
+    font-size: 5em;
+    right: 17%;
+  }
 }
 @media (min-width: 700px) {
   #hero #name .text {
@@ -548,16 +571,17 @@ header > div .mobile-nav.active span::after {
   display: block;
 }
 #hero #intro {
-  margin-top: 100px;
+  margin-top: 2em;
   position: relative;
 }
-#hero #intro .box {
-  height: 150px;
-  width: 325px;
+@media (min-width: 400px) {
+  #hero #intro {
+    margin-top: 100px;
+  }
 }
 #hero #intro .text {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 1.5em;
   margin: 0;
   position: absolute;
@@ -565,16 +589,35 @@ header > div .mobile-nav.active span::after {
   left: 6%;
   transition: font-size 0.5s;
 }
+@media (min-width: 375px) {
+  #hero #intro .text {
+    width: 90%;
+  }
+}
+@media (min-width: 410px) {
+  #hero #intro .text {
+    font-size: 2em;
+    width: 100%;
+  }
+}
 @media (min-width: 700px) {
   #hero #intro .text {
     font-size: 2.5em;
   }
 }
-#hero #intro .text span, #hero #intro .text header > div .mobile-nav span::before, header > div .mobile-nav #hero #intro .text span::before, #hero #intro .text header > div .mobile-nav span::after, header > div .mobile-nav #hero #intro .text span::after {
-  display: block;
+@media (min-width: 350px) {
+  #hero #intro .text span, #hero #intro .text header > div .mobile-nav span::before, header > div .mobile-nav #hero #intro .text span::before, #hero #intro .text header > div .mobile-nav span::after, header > div .mobile-nav #hero #intro .text span::after {
+    display: block;
+  }
 }
 
 /* ===== portfolio ===== */
+@media (min-width: 1032px) {
+  .portfolio > article a.proportion_fix img, .portfolio > article a.proportion_fix {
+    flex-basis: 70%;
+  }
+}
+
 .portfolio > article {
   align-items: flex-start;
   display: -webkit-flex;
@@ -584,18 +627,15 @@ header > div .mobile-nav.active span::after {
   justify-content: center;
   background-color: #f4f4f4;
   box-sizing: border-box;
-  margin: 7em 0;
+  margin: 5em 0;
   min-width: 300px;
   padding: 20px;
 }
-@media (min-width: 60em) {
+@media (min-width: 1032px) {
   .portfolio > article {
     justify-content: space-between;
-    margin: 10em 0;
+    margin: 7em 0;
   }
-}
-.portfolio > article:first-of-type {
-  margin-top: 5em;
 }
 .portfolio > article.right {
   flex-flow: row-reverse;
@@ -608,7 +648,7 @@ header > div .mobile-nav.active span::after {
   border-color: transparent;
   opacity: 1;
 }
-.portfolio > article img {
+.portfolio > article a img {
   box-shadow: 0 2px 4px rgba(102, 102, 102, 0.5);
   flex: 0 1 100%;
   height: auto;
@@ -616,8 +656,8 @@ header > div .mobile-nav.active span::after {
   max-width: 600px;
   width: 100%;
 }
-@media (min-width: 60em) {
-  .portfolio > article img {
+@media (min-width: 1032px) {
+  .portfolio > article a img {
     flex: 0 1 62%;
     margin-bottom: 0;
   }
@@ -625,7 +665,7 @@ header > div .mobile-nav.active span::after {
 .portfolio > article .details {
   flex: 0 1 100%;
 }
-@media (min-width: 60em) {
+@media (min-width: 1032px) {
   .portfolio > article .details {
     flex: 0 1 30%;
   }
@@ -659,6 +699,17 @@ header > div .mobile-nav.active span::after {
 }
 .case img.image_small {
   max-width: 600px;
+}
+.case img.mobile_small {
+  max-height: 60vh !important;
+  width: auto !important;
+}
+@media (min-width: 500px) {
+  .case img.mobile_small {
+    height: auto;
+    max-width: 1000px;
+    width: 100%;
+  }
 }
 .case .overview {
   margin: 5em auto 0;
@@ -1182,7 +1233,7 @@ textarea:-webkit-autofill {
   box-shadow: none;
 }
 .slbCloseBtn:hover, .slbCloseBtn:focus, .slbCloseBtn:active, .slbArrow:hover, .slbArrow:focus, .slbArrow:active {
-  color: #04a796;
+  color: #09d36d;
   background: none;
   transition: color 250ms;
 }
@@ -1256,7 +1307,7 @@ textarea:-webkit-autofill {
 }
 
 .slbArrow.next:hover:before {
-  border-left-color: #04a796;
+  border-left-color: #09d36d;
   transition: border-left-color 250ms;
 }
 
@@ -1268,7 +1319,7 @@ textarea:-webkit-autofill {
 }
 
 .slbArrow.prev:hover:before {
-  border-right-color: #04a796;
+  border-right-color: #09d36d;
   transition: border-right-color 250ms;
 }
 

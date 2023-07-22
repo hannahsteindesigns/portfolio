@@ -2,26 +2,38 @@
 %box {
   //background-color: rgba(lighten($teal, 15%), 0.5);
   background-color: $green_medium;
+  height: 150px;
+	width: 80%;
+	@include responsiveMin(500px) {
+		width: 325px;
+	}
 }
 
 #hero {
-	min-height: 60vh;
+	min-height: 40vh;
 	position: relative;
+	@include responsiveMin(400px) {
+		min-height: 60vh;
+	}
 	#name {
 		@include flexbox($justify-content: flex-end);
 		text-align: right;
 		.box {
 			@extend %box;
-			height: 150px;
-			width: 325px;
 		}
 		.text {
 			//font-family: $sans;
-			font-size: 5em;
+			font-size: 3.5em;
 			line-height: 1em;
 			margin: 0;
 			position: absolute;
-			right: 17%;
+			right: 10%;
+			top: 8%;
+			transition: font-size .5s;
+			@include responsiveMin(400px) {
+				font-size: 5em;
+				right: 17%;
+			}
 			@include responsiveMin(700px) {
         right: 12%;
       }
@@ -31,27 +43,38 @@
 		}
 	}
 	#intro {
-		margin-top: 100px;
+		margin-top: 2em;
 		position: relative;
+		@include responsiveMin(400px) {
+			margin-top: 100px;
+		}
 		.box {
 			@extend %box;
-			height: 150px;
-			width: 325px;
+			//test
 		}
 		.text {
 			font-family: $sans;
-			font-size: 2em;
+			font-size: 1.5em;
 			line-height: 1.5em;
 			margin: 0;
 			position: absolute;
 			bottom: 15%;
 			left: 6%;
 			transition: font-size .5s;
+			@include responsiveMin(375px) {
+				width: 90%;
+			}
+			@include responsiveMin(410px) {
+				font-size: 2em;
+				width: 100%;
+			}
 			@include responsiveMin(700px) {
         font-size: 2.5em;
       }
 			& span {
-				display: block;
+				@include responsiveMin(350px) {
+					display: block;
+				}
 			}
 		}
 	}
