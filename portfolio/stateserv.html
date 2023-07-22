@@ -52,10 +52,10 @@
   <section id="content" class="width case animate fade">
     <article class="overview">
       <h2>prescription upload &amp; review process</h2>
-      <h5 class="green">in-house designer &amp; developer at StateServ Medical</h5>
-<!--       <div>
-        <a href="stateserv_authenticated.html" class="button">Enter password to view images</a>
-      </div> -->
+      <h5 class="green">in-house designer &amp; developer at StateServ</h5>
+      <div>
+        <a href="stateserv-authenticated.html" class="button">Enter password to view images</a>
+      </div>
     </article>
     <article id="challenge" class="slide">
       <div class="title">
@@ -84,7 +84,7 @@
           <p>Because I was starting with existing functionality, I only created a few wireframes before generating mid- to high-fidelity mockups. I've built a library of mockup components that I use for all my designs, so I wasn't starting from scratch.</p>
         </div>
         <div class="cell">
-          <p>I did, however, use this chance to update the UX of our file upload process, which definitely needed some love. The buttons, icons, and colors were not in line with the rest of the app. In order to reduce the cognitive load, I made sure to upate this module to follow our existing patterns. For example &mdash; our modal pattern is to have primary actions in a blue button on the right and cancel actions in a white button on the left. Destructive actions use a red button for emphasis and immediate recognition. I had to make updates to align the existing feature with these patterns.</p>
+          <p>I did, however, use this chance to update the UX of our file upload process, which definitely needed some love. The buttons, icons, and colors were not in line with the rest of the app. In order to reduce the cognitive load, I made sure to update this module to follow our existing patterns. For example &mdash; our modal pattern is to have primary actions in a blue button on the right and cancel actions in a white button on the left. Destructive actions use a red button for emphasis and immediate recognition. I had to make updates to align the existing feature with these patterns.</p>
           <p>Despite many of our users working in the field instead of at a desk, it was obvious that the mobile experience was not considered when the file upload feature was originally implemented, so I made sure to consider that UI from the start. I had to ensure that the tap targets were large enough for users to successfully select buttons on their phones and that the table-based layout gracefully resized without forcing awkward multidirectional scrolling. I ended up with more than 60 screens in the final prototype, which I presented to stakeholders from various parts of the business for review and approval.</p>
       </div>
       </section>
@@ -99,7 +99,7 @@
           <p>Working with back-end developers, I helped implement the changes to the file upload process that would allow tracking prescriptions. One of the main considerations was information and validation to help guide the user when entering data. We provided them with upload requirements relating to file type and size before an upload was ever attempted, instead of forcing them to fail in order to view what criteria they missed. We also provided guidelines for what should be included in a prescription file.</p>
         </div>
         <div class="cell">
-          <p>Clinician users are able to upload prescriptions via the file upload module the same way they always have but now there's a new option to designate a file as a prescription, and if so to enter an expiration date which is required by regulators.</p>
+          <p>Clinician users can upload prescriptions via the file upload module the same way they always have but now there's a new option to designate a file as a prescription, and if so to enter an expiration date which is required by regulators.</p>
           <p>Because an expiration date is required, some prescriptions can be automatically marked as noncompliant by the system and prompt for a solution before a manual review is ever done. DME provider users tasked with reviewing prescriptions can now perform that review within the app, selecting from a list of prefilled reasons for rejection or supplying their own. When a prescription is rejected, the app sends an email to the hospice user prompting them to upload a new file. This reduces a lot of manual back-and-forth via email that we can't track within the system.</p>
           <p>Users from both lines of business can also view prescription data within a report in the app. There they can search for patients by location, file status, and compliance. They can also view who placed the noncompliant order to identify consistent points of failure.</p>
         </div>
@@ -110,7 +110,7 @@
         <h3 class="">next steps</h3>
         <span class="highlight"></span>
       </div>
-      <p>The end goal is to fully integrate this process into the web app, so no external files are needed. Again, we plan to leverage existing functionality by prompting users to fill out a new in-app form in the same UI where we currently prompt to upload a file.</p>
+      <p>The end goal is to fully integrate this process into the web app, so no external files are needed. Again, we plan to leverage existing functionality by prompting users to fill out a new in-app form in the same UI where we currently prompt them to upload a file.</p>
       <p>In addition to ensuring more consistent data across users and hospice branches, this will move us a step closer to being able to integrate with existing electronic medical records when available and remove the need for manual entry entirely.</p>
       <p>I have created an additional 30 or so screens in the prototype to demonstrate this behavior.</p>
     </article>
