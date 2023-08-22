@@ -1,7 +1,7 @@
 /* ===== hero ===== */
 %box {
-  //background-color: rgba(lighten($teal, 15%), 0.5);
-  background-color: $green_medium;
+  background-color: lighten($primary_lighter, 25%);
+  //background-color: darken($light-grey, 2%);
   height: 150px;
 	width: 80%;
 	@include responsiveMin(500px) {
@@ -10,6 +10,7 @@
 }
 
 #hero {
+	//color: $primary_color;
 	min-height: 40vh;
 	position: relative;
 	@include responsiveMin(400px) {

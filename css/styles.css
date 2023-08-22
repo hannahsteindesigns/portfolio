@@ -65,6 +65,10 @@ table {
   color: #999;
 }
 
+.color_primary {
+  color: #8A2BE2;
+}
+
 body {
   box-sizing: border-box;
   color: #666;
@@ -74,12 +78,12 @@ body {
 }
 
 ::selection {
-  background-color: #08ba61;
+  background-color: #9641e5;
   color: #fff;
 }
 
 ::-moz-selection {
-  background-color: #08ba61;
+  background-color: #9641e5;
   color: #fff;
 }
 
@@ -145,7 +149,7 @@ p.large {
 
 a {
   border-bottom: 1px dotted transparent;
-  color: #07A254;
+  color: #8A2BE2;
   opacity: 1;
   text-decoration: none;
   transition: border 0.3s, opacity 0.3s;
@@ -162,7 +166,7 @@ header a {
 
 button,
 .button {
-  background-color: #07A254;
+  background-color: #8A2BE2;
   border: none;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(102, 102, 102, 0.5);
@@ -177,7 +181,7 @@ button:hover, button:focus, button:active,
 .button:hover,
 .button:focus,
 .button:active {
-  background-color: #07a757;
+  background-color: #8c2fe3;
   color: #FFF;
   transition: all 0.5s;
 }
@@ -187,7 +191,7 @@ button.full,
 }
 
 .stress {
-  color: #07A254;
+  color: #8A2BE2;
   font-weight: bold;
 }
 
@@ -382,7 +386,7 @@ header {
 }
 header.sticky {
   background-color: #FFFFFF;
-  border-bottom: 2px solid #07A254;
+  border-bottom: 2px solid #8A2BE2;
   box-shadow: 0 2px 4px rgba(102, 102, 102, 0.25);
   left: 0;
   margin-top: 0;
@@ -422,7 +426,7 @@ header > div h1 {
   margin: 0;
 }
 header > div h1 a {
-  color: #07A254;
+  color: #8A2BE2;
 }
 header > div nav {
   display: none;
@@ -438,7 +442,7 @@ header > div nav a {
   text-transform: uppercase;
 }
 header > div nav a.active {
-  color: #07A254;
+  color: #8A2BE2;
 }
 header > div .mobile-nav {
   border: none;
@@ -458,7 +462,7 @@ header > div .mobile-nav:hover, header > div .mobile-nav:focus {
   outline: none;
 }
 header > div .mobile-nav span, header > div .mobile-nav span::before, header > div .mobile-nav span::after {
-  background-color: #07A254;
+  background-color: #8A2BE2;
   content: "";
   display: block;
   height: 0.3em;
@@ -519,7 +523,7 @@ header > div .mobile-nav.active span::after {
 
 /* ===== hero ===== */
 #hero #intro .box, #hero #name .box {
-  background-color: #6DD28A;
+  background-color: #eddefa;
   height: 150px;
   width: 80%;
 }
@@ -746,7 +750,7 @@ header > div .mobile-nav.active span::after {
 .case article .title .highlight {
   width: 80px;
   height: 40px;
-  background-color: rgba(109, 210, 138, 0.35);
+  background-color: rgba(175, 110, 235, 0.35);
   position: absolute;
   bottom: 20px;
   left: 0;
@@ -866,7 +870,7 @@ header > div .mobile-nav.active span::after {
 .about .bio aside div .highlight {
   width: 200px;
   height: 250px;
-  background-color: #6DD28A;
+  background-color: #AF6EEB;
   position: absolute;
   bottom: 0;
   left: -10px;
@@ -1041,7 +1045,7 @@ textarea:-webkit-autofill {
 }
 
 #scrollTop {
-  background-color: #07A254;
+  background-color: #8A2BE2;
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(102, 102, 102, 0.5);
   bottom: 0.5em;
@@ -1233,7 +1237,7 @@ textarea:-webkit-autofill {
   box-shadow: none;
 }
 .slbCloseBtn:hover, .slbCloseBtn:focus, .slbCloseBtn:active, .slbArrow:hover, .slbArrow:focus, .slbArrow:active {
-  color: #09d36d;
+  color: #a358e8;
   background: none;
   transition: color 250ms;
 }
@@ -1307,7 +1311,7 @@ textarea:-webkit-autofill {
 }
 
 .slbArrow.next:hover:before {
-  border-left-color: #09d36d;
+  border-left-color: #a358e8;
   transition: border-left-color 250ms;
 }
 
@@ -1319,7 +1323,7 @@ textarea:-webkit-autofill {
 }
 
 .slbArrow.prev:hover:before {
-  border-right-color: #09d36d;
+  border-right-color: #a358e8;
   transition: border-right-color 250ms;
 }
 

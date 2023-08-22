@@ -12,6 +12,11 @@ $teal: #037569;
 $teal_medium: #80CCC0;
 $green: #07A254;
 $green_medium: #6DD28A;
+$purple: #8A2BE2;
+$purple_medium: #AF6EEB;
+
+$primary_color: $purple;
+$primary_lighter: $purple_medium;
 
 .green {
   color: $green;
@@ -24,6 +29,9 @@ $green_medium: #6DD28A;
 }
 .grey_medium {
   color: $grey_medium;
+}
+.color_primary {
+  color: $primary_color;
 }
 
 // fonts
@@ -42,11 +50,11 @@ body {
   padding: 0 2em 4em 2em;
 }
 ::selection {
-  background-color: lighten($green, 5%);
+  background-color: lighten($primary_color, 5%);
   color: #fff;
 }
 ::-moz-selection {
-  background-color: lighten($green, 5%);
+  background-color: lighten($primary_color, 5%);
   color: #fff;
 }
 .width {
@@ -110,7 +118,7 @@ p {
 // links
 a {
   border-bottom: 1px dotted transparent;
-  color: $green;
+  color: $primary_color;
   opacity: 1;
   text-decoration: none;
   transition: border .3s, opacity .3s;
@@ -128,7 +136,7 @@ a {
 // buttons
 button,
 .button {
-  background-color: $green;
+  background-color: $primary_color;
   border: none;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba($dark-grey, .5);
@@ -139,7 +147,7 @@ button,
   padding: 1em 1.25em;
   transition: all .5s;
   &:hover, &:focus, &:active {
-    background-color: lighten($green, 1%);
+    background-color: lighten($primary_color, 1%);
     color: #FFF;
     transition: all .5s;
   }
@@ -150,7 +158,7 @@ button,
 
 // helpers
 .stress {
-  color: $green;
+  color: $primary_color;
   font-weight: bold;
 }
 .note {

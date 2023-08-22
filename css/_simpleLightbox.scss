@@ -118,7 +118,7 @@
   background: none;
   box-shadow: none;
   &:hover, &:focus, &:active {
-    color: lighten($green, 10%);
+    color: lighten($primary_color, 10%);
     background: none;
     transition: color 250ms;
   }
@@ -193,7 +193,7 @@
 }
 
 .slbArrow.next:hover:before {
-  border-left-color: lighten($green, 10%);
+  border-left-color: lighten($primary_color, 10%);
   transition: border-left-color 250ms;
 }
 
@@ -205,7 +205,7 @@
 }
 
 .slbArrow.prev:hover:before {
-  border-right-color: lighten($green, 10%);
+  border-right-color: lighten($primary_color, 10%);
   transition: border-right-color 250ms;
 }
 

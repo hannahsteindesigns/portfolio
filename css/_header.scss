@@ -6,7 +6,7 @@ header {
   }
   &.sticky {
     background-color: #FFFFFF;
-    border-bottom: 2px solid $green;
+    border-bottom: 2px solid $primary_color;
     box-shadow: 0 2px 4px rgba($dark-grey, .25);
     left: 0;
     margin-top: 0;
@@ -38,7 +38,7 @@ header {
       line-height: .8em;
       margin: 0;
       a {
-        color: $green;
+        color: $primary_color;
       }
     }
     nav {
@@ -53,7 +53,7 @@ header {
         padding: .5em 0;
         text-transform: uppercase;
         &.active {
-          color: $green;
+          color: $primary_color;
         }
       }
     }
@@ -72,7 +72,7 @@ header {
         outline: none;
       }
       span {
-        background-color: $green;
+        background-color: $primary_color;
         content: "";
         display: block;
         height: .3em;
